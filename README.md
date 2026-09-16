@@ -48,7 +48,7 @@ The project is designed as a **modular receiver-side signal processing prototype
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 ### Signal Ingestion
 
@@ -123,7 +123,7 @@ The graphical interface provides:
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```text
 SignalAnalysisEngine/
@@ -153,7 +153,7 @@ SignalAnalysisEngine/
 
 ---
 
-## 📂 Module Description
+##  Module Description
 
 ### `src/signal_io.py`
 
@@ -433,7 +433,7 @@ The GUI provides:
 
 ---
 
-## 📊 Signal Processing Pipeline
+##  Signal Processing Pipeline
 
 The receiver architecture can be represented as:
 
@@ -486,7 +486,7 @@ The receiver architecture can be represented as:
 
 ---
 
-## 🧪 Test Signals
+##  Test Signals
 
 The project includes synthetic test signals for basic validation.
 
@@ -542,7 +542,7 @@ Gaussian noise is added to the generated signals to provide a more realistic tes
 
 ---
 
-## 🔐 Reed-Solomon Support
+##  Reed-Solomon Support
 
 The project provides optional Reed-Solomon decoding using the `reedsolo` package.
 
@@ -558,7 +558,7 @@ For successful correction, the incoming signal must contain data encoded using a
 
 ---
 
-## ⚠️ Current Limitations
+##  Current Limitations
 
 This project is currently a **research/prototype-level signal analysis engine**.
 
@@ -695,7 +695,7 @@ Visualization
 
 ---
 
-## 📜 License
+##  License
 
 This project is intended for educational, research, and experimental purposes.
 
@@ -703,7 +703,7 @@ A formal open-source license can be added based on the intended distribution mod
 
 ---
 
-## ⭐ Project Status
+##  Project Status
 
 **Current Status: Functional Prototype**
 
