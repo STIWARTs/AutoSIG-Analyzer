@@ -4,7 +4,7 @@ A modular Python-based signal analysis and demodulation platform designed to aut
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 The **Signal Analysis Engine** provides an end-to-end framework for analyzing digitally modulated communication signals.
 
