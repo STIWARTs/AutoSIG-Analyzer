@@ -1,0 +1,41 @@
+import streamlit as st
+
+from app.components.charts import constellation_figure
+
+
+def render() -> None:
+    result = st.session_state.get("result")
+    if not result or not result.validation or not result.validation.passed:
+        st.warning("A validated recovery is required before bitstream display.")
+        return
+    validation = result.validation
+    st.markdown("<div class='screen-heading'>Validated Bitstream</div>", unsafe_allow_html=True)
+    st.markdown("<div class='muted'>CORRELATION SCORE</div><div class='correlation-value'>" +
+                f"{validation.correlation_score:.3f}</div>", unsafe_allow_html=True)
+    st.caption(f"Preamble peak at recovered-bit offset {validation.peak_index}. Header includes preamble and frame header.")
+    header = "".join(map(str, validation.header_bits))
+    payload = "".join(map(str, validation.payload_bits))
+    st.markdown("<div class='bitstream'><div class='bit-header'><span class='muted'>HEADER</span><br>" + header +
+                "</div><div class='bit-payload'><span class='muted'>PAYLOAD</span><br>" + payload + "</div></div>",
+                unsafe_allow_html=True)
+    # The recovered-symbol constellation is only meaningful once a hypothesis has
+    # cleared Frame Validation, so it lives behind the same gate as this screen.
+    accepted = result.accepted
+    symbols = accepted.synchronized_symbols if accepted is not None else None
+    if symbols is not None and len(symbols):
+        info, plot = st.columns((1.25, 1))
+        with info:
+            st.markdown("#### Recovered symbol constellation")
+            st.caption("Carrier-, timing- and phase-corrected symbols captured at the synchronization "
+                       "step, before demodulation collapsed them to bits. Tight clusters confirm a clean "
+                       "lock; compare with the diffuse “Raw I/Q (pre-synchronization)” ring on the "
+                       "Analysis screen.")
+            rows = [("Modulation", accepted.hypothesis.modulation),
+                    ("Symbols plotted", f"{len(symbols):,}"),
+                    ("Phase state", f"{accepted.hypothesis.rank}")]
+            table = "".join(f"<tr><td class='label'>{k}</td><td class='value'>{v}</td></tr>" for k, v in rows)
+            st.markdown("<div class='instrument-panel'><table class='measurement'>" + table + "</table></div>",
+                        unsafe_allow_html=True)
+        with plot:
+            st.plotly_chart(constellation_figure(symbols, "Recovered Symbols (post-synchronization)", size=420),
+                            use_container_width=False, key="recovered_constellation")
