@@ -39,12 +39,15 @@ datasets/
 .gnuradio-gen/
 
 # --------------------------------------------------------------------------- #
-# Runtime artifacts: SQLite analysis history (recreated on first run)
-# --------------------------------------------------------------------------- #
-data/
+# Runtime artifacts: SQLite analysis history. The data/ folder is otherwise
+# ignored (recreated locally), but we deliberately ship the seeded database so
+# the deployed app starts with existing analyses in its Recent Analyses list.
+data/*
 *.db
 *.sqlite
 *.sqlite3
+# Re-include the one DB to commit (must come after the *.db / data/* rules).
+!data/autosig.db
 
 # --------------------------------------------------------------------------- #
 # Trained model caches / intermediate training outputs (keep the shipped

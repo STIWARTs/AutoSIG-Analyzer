@@ -1,3 +1,11 @@
+# Streamlit Community Cloud build: CPU-only PyTorch so the deploy fits free-tier
+# disk/RAM. This extra index makes pip resolve the small +cpu torch wheel instead
+# of the multi-GB CUDA build (the +cpu local version outranks the plain PyPI one).
+# Local development uses the isolated .conda environment and is unaffected by this
+# file; only the hosted builder reads it. If a build ever pulls the CUDA wheel,
+# pin explicitly, e.g. torch==2.9.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 numpy>=2.3
 scipy>=1.16
 plotly>=6.0
