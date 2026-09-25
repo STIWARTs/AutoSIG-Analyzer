@@ -18,7 +18,7 @@ def render() -> None:
         if attempt:
             for step, status, detail in attempt.steps:
                 content += ("<div style='display:flex;justify-content:space-between;align-items:center;"
-                            "padding:8px 0;border-bottom:1px solid #232A33'><span>" + step +
+                            "padding:8px 0;border-bottom:1px solid var(--line)'><span>" + step +
                             f" <span class='muted'>· {detail}</span></span>{status_badge(status)}</div>")
         else:
             content += "<div style='padding:8px 0'>" + status_badge("IN PROGRESS") + "</div>"

@@ -1,10 +1,25 @@
 [theme]
+# base selects the default theme; users can toggle Light/Dark in the settings
+# menu because both [theme.light] and [theme.dark] are defined below.
 base = "dark"
 primaryColor = "#3E92CC"
+font = "sans serif"
+
+[theme.dark]
 backgroundColor = "#0B0F14"
 secondaryBackgroundColor = "#12161C"
 textColor = "#E6EDF3"
-font = "sans serif"
+
+[theme.dark.sidebar]
+backgroundColor = "#0D1218"
+
+[theme.light]
+backgroundColor = "#F7F9FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1B2733"
+
+[theme.light.sidebar]
+backgroundColor = "#EDF1F5"
 
 [server]
 maxUploadSize = 200

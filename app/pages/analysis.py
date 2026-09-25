@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 import streamlit as st
 
-from app.components.charts import constellation_figure, dark_layout
+from app.components.charts import constellation_figure, dark_layout, palette
 
 
 def render() -> None:
@@ -46,7 +46,7 @@ def render() -> None:
     ordered = sorted(result.probabilities.items(), key=lambda item: item[1], reverse=True)
     confidence = go.Figure(go.Bar(x=[score for _, score in ordered], y=[name for name, _ in ordered],
                                   orientation="h", marker_color="#3E92CC", text=[f"{score:.1%}" for _, score in ordered],
-                                  textposition="outside", textfont=dict(color="#E6EDF3", family="IBM Plex Mono")))
+                                  textposition="outside", textfont=dict(color=palette()["text"], family="IBM Plex Mono")))
     confidence.update_layout(xaxis=dict(range=[0, 1.12], tickformat=".0%", title="Model confidence"),
                             yaxis=dict(autorange="reversed", title=None), height=190)
     st.plotly_chart(dark_layout(confidence, 190), key="cnn_confidence")

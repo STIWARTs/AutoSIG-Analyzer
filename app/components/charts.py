@@ -2,24 +2,34 @@ from __future__ import annotations
 
 import numpy as np
 import plotly.graph_objects as go
+import streamlit as st
 
-# Instrument-panel token system (see docs/design.md): near-black plot surface,
-# hairline gridlines, steel-cyan data points, IBM Plex Sans titles with IBM Plex
-# Mono numeric readouts. Shared by every Plotly chart so styling stays identical.
-BG = "#0B0F14"
-LINE = "#232A33"
+# Instrument-panel token system (see docs/design.md): hairline gridlines,
+# steel-cyan data points, IBM Plex Sans titles with IBM Plex Mono numeric
+# readouts. Shared by every Plotly chart so styling stays identical. Colors are
+# resolved per active theme so charts match light/dark instead of pinning dark.
 ACCENT = "#3E92CC"
-TEXT = "#E6EDF3"
 SANS = "IBM Plex Sans"
 MONO = "IBM Plex Mono"
 
+_PALETTE = {
+    "dark": {"bg": "#0B0F14", "line": "#232A33", "text": "#E6EDF3", "template": "plotly_dark"},
+    "light": {"bg": "#F7F9FB", "line": "#D5DCE4", "text": "#1B2733", "template": "plotly_white"},
+}
+
+
+def palette() -> dict[str, str]:
+    """Active chart palette; pages use it for series/text colors too."""
+    return _PALETTE.get(st.context.theme.type, _PALETTE["dark"])
+
 
 def dark_layout(fig: go.Figure, height: int = 300) -> go.Figure:
-    fig.update_layout(template="plotly_dark", paper_bgcolor=BG, plot_bgcolor=BG, height=height,
-                      font=dict(family=SANS, color=TEXT), margin=dict(l=45, r=20, t=40, b=40),
-                      showlegend=False)
-    fig.update_xaxes(gridcolor=LINE, zerolinecolor=LINE)
-    fig.update_yaxes(gridcolor=LINE, zerolinecolor=LINE)
+    p = palette()
+    fig.update_layout(template=p["template"], paper_bgcolor=p["bg"], plot_bgcolor=p["bg"],
+                      height=height, font=dict(family=SANS, color=p["text"]),
+                      margin=dict(l=45, r=20, t=40, b=40), showlegend=False)
+    fig.update_xaxes(gridcolor=p["line"], zerolinecolor=p["line"])
+    fig.update_yaxes(gridcolor=p["line"], zerolinecolor=p["line"])
     return fig
 
 
