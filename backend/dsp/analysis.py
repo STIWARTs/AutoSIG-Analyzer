@@ -3,7 +3,13 @@ from __future__ import annotations
 import numpy as np
 from scipy import signal
 
+from backend.dsp.carrier import estimate_carrier_offset
 from backend.types import AnalysisResult, IngestedSignal
+
+# Shared with the recovery synchronization path (backend.dsp.sync): one gated
+# estimator for both display and correction, imported here under the historical
+# private name so existing callers and A/B tooling keep working.
+_estimate_carrier_offset = estimate_carrier_offset
 
 
 def _occupied_bandwidth(freq: np.ndarray, psd: np.ndarray) -> float:
@@ -36,10 +42,16 @@ def _estimate_symbol_rate(x: np.ndarray, fs: float | None) -> float | None:
     return float(frequencies[candidates][np.argmax(spectrum[candidates])])
 
 
-def analyze_signal(signal_data: IngestedSignal, remove_dc: bool = True) -> AnalysisResult:
+def prepare_samples(signal_data: IngestedSignal, remove_dc: bool = True) -> np.ndarray:
     x = np.asarray(signal_data.samples, dtype=np.complex64)
     if remove_dc:
         x = x - np.mean(x)
+    return x
+
+
+def analyze_signal(signal_data: IngestedSignal, remove_dc: bool = True,
+                   modulation: str | None = None) -> AnalysisResult:
+    x = prepare_samples(signal_data, remove_dc)
     processed = IngestedSignal(samples=x, sample_rate=signal_data.sample_rate,
                                center_frequency=signal_data.center_frequency,
                                source_format=signal_data.source_format, filename=signal_data.filename,
@@ -57,16 +69,27 @@ def analyze_signal(signal_data: IngestedSignal, remove_dc: bool = True) -> Analy
                                       return_onesided=False)
     f_order = np.argsort(f_spec)
     sxx_db = 20 * np.log10(np.maximum(np.abs(sxx[f_order]), 1e-10))
-    weights = np.maximum(psd - np.percentile(psd, 20), 0)
-    centroid = float(np.sum(freq * weights) / np.sum(weights)) if np.sum(weights) else 0.0
     has_rate = processed.sample_rate is not None
-    center = processed.center_frequency if has_rate and processed.center_frequency is not None else None
+    # Synthetic baseband captures carry core:frequency 0.0 (or nothing at all for
+    # WAV), so echoing metadata alone reads as "0.0 / UNAVAILABLE". Measure the
+    # carrier offset from the signal itself and anchor it to the metadata center
+    # when one exists; without a sample rate the value stays relative, so it is
+    # withheld from the Hz-denominated parameters.
+    carrier_offset = _estimate_carrier_offset(x, processed.sample_rate, modulation)
+    # A genuine absolute RF anchor exists only when the capture carries a
+    # nonzero center frequency (SigMF core:frequency or manual entry). Every
+    # synthetic baseband file ships 0.0 as a placeholder, which must not read
+    # as "absolute RF known".
+    absolute_available = (processed.center_frequency is not None
+                          and float(processed.center_frequency) != 0.0)
+    center = (processed.center_frequency or 0.0) + carrier_offset if carrier_offset is not None else None
     parameters = {
         "sample_rate_hz": processed.sample_rate if has_rate else None,
         "occupied_bandwidth_hz": _occupied_bandwidth(freq, psd_db) if has_rate else None,
         "center_frequency_hz": center,
+        "carrier_offset_hz": carrier_offset,
         "estimated_snr_db": _estimate_snr(psd_db),
         "estimated_symbol_rate_baud": _estimate_symbol_rate(x, processed.sample_rate),
-        "absolute_frequency_available": float(has_rate),
+        "absolute_frequency_available": float(absolute_available),
     }
     return AnalysisResult(processed, freq, psd_db, f_spec[f_order], t_spec, sxx_db, parameters)

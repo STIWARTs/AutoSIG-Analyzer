@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from backend.dsp.analysis import analyze_signal
+from backend.dsp.analysis import analyze_signal, prepare_samples
 from backend.hypotheses.engine import build_hypotheses
 from backend.ml.classifier import classify_samples
 from backend.recovery.chain import run_recovery
@@ -9,8 +9,10 @@ from backend.validation.correlation import validate_bitstream
 
 
 def run_pipeline(signal_data: IngestedSignal, top_k: int = 2) -> PipelineResult:
-    analysis = analyze_signal(signal_data)
-    probabilities = classify_samples(analysis.signal.samples)
+    # Classify first (same pre-processed samples as before) so the DSP analysis
+    # can pick the noise-optimal carrier-offset estimator order for the modulations.
+    probabilities = classify_samples(prepare_samples(signal_data))
+    analysis = analyze_signal(signal_data, modulation=max(probabilities, key=probabilities.get))
     hypotheses = build_hypotheses(probabilities, top_k=top_k)
     attempts = []
     accepted = None
@@ -31,7 +33,9 @@ def run_pipeline(signal_data: IngestedSignal, top_k: int = 2) -> PipelineResult:
     if accepted:
         validation = validations[accepted.hypothesis.rank]
     elif validations:
-        validation = validations[max(validations)]  # nothing passed; expose the last scored attempt
+        # Nothing passed; expose the best-scoring attempt, not merely the
+        # highest-ranked (last-tried, typically weakest) one.
+        validation = max(validations.values(), key=lambda v: v.correlation_score)
     else:
         validation = None
     return PipelineResult(analysis, probabilities, hypotheses, attempts, validation, accepted)

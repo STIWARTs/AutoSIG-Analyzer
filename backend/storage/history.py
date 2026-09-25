@@ -121,6 +121,7 @@ def _serialize(result: PipelineResult) -> str:
         "recovered_bits": _bits_to_list(attempt.recovered_bits),
         "error": attempt.error,
         "synchronized_symbols": _complex_to_list(attempt.synchronized_symbols),
+        "phase_state_degrees": attempt.phase_state_degrees,
     } for attempt in result.attempts]
     payload = {
         "analysis": {
@@ -182,6 +183,7 @@ def _deserialize(blob: str) -> PipelineResult:
             else np.asarray(attempt_payload["recovered_bits"], dtype=np.uint8),
             error=attempt_payload["error"],
             synchronized_symbols=_list_to_complex(attempt_payload["synchronized_symbols"]),
+            phase_state_degrees=attempt_payload.get("phase_state_degrees"),
         ))
     by_rank = {attempt.hypothesis.rank: attempt for attempt in attempts}
     accepted = by_rank.get(payload["accepted_rank"]) if payload.get("accepted_rank") is not None else None

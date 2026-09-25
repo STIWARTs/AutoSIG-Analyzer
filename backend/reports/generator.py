@@ -12,10 +12,16 @@ def build_report(result: PipelineResult) -> str:
         "input": result.analysis.signal.filename,
         "parameters": result.analysis.parameters,
         "classifier_probabilities": result.probabilities,
-        "hypotheses": [{"rank": h.rank, "modulation": h.modulation, "interleaving": h.interleaving,
-                          "fec": h.fec, "score": h.score} for h in result.hypotheses],
-        "accepted_hypothesis": ({"modulation": accepted.modulation, "interleaving": accepted.interleaving,
-                                  "fec": accepted.fec} if accepted else None),
+        # Only modulation is hypothesized and varied across candidates; the
+        # recovery chain applies one fixed MVP configuration to all of them,
+        # so it is reported once rather than per hypothesis.
+        "fixed_recovery_configuration": {
+            "interleaving": "Block",
+            "fec": "Convolutional / Viterbi",
+            "note": "Fixed MVP-scope configuration; not a hypothesized or searched dimension.",
+        },
+        "hypotheses": [{"rank": h.rank, "modulation": h.modulation, "score": h.score} for h in result.hypotheses],
+        "accepted_hypothesis": ({"modulation": accepted.modulation} if accepted else None),
         "correlation_score": validation.correlation_score if validation else None,
         "header_bits": "".join(map(str, validation.header_bits)) if validation else "",
         "payload_bits": "".join(map(str, validation.payload_bits)) if validation else "",

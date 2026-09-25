@@ -26,17 +26,28 @@ def run_recovery(samples: np.ndarray, hypothesis: Hypothesis, samples_per_symbol
                                error="Unsupported recovery modulation")
     try:
         symbols, sync = synchronize_psk(samples, samples_per_symbol, hypothesis.modulation)
-        steps.append(("Synchronization", "PASS", f"CFO {sync['cfo_rad_per_sample']:.5f} rad/sample"))
+        if sync["locked"]:
+            steps.append(("Synchronization", "PASS", f"CFO {sync['cfo_rad_per_sample']:.5f} rad/sample"))
+        else:
+            # Shared estimator refused to lock: NO LOCK/LOW CONFIDENCE, frequency
+            # correction was skipped (not zeroed), and recovery proceeds so Frame
+            # Validation remains the final evidence gate.
+            steps.append(("Synchronization", "WARN", "NO LOCK \u2014 CFO estimate refused; continuing uncorrected"))
         # A fourth-power Costas-style estimator determines CFO but leaves phase
         # ambiguity (90-degree for QPSK, 180-degree for BPSK). Resolve those
         # physical carrier states against the known sync word, then let
         # validation independently apply the acceptance threshold below the
         # recovery chain.
         demodulate = _qpsk_demodulate if hypothesis.modulation == "QPSK" else _bpsk_demodulate
+        # QPSK has a four-quadrant (90-degree) ambiguity; BPSK's physical
+        # ambiguity is a 180-degree flip, so its grid must not spend a slot on
+        # a 90-degree rotation that only scrambles the decision boundary.
+        phase_angles = ([0.0, np.pi / 2, np.pi, 3 * np.pi / 2] if hypothesis.modulation == "QPSK"
+                        else [0.0, np.pi])
         candidates: list[tuple[float, np.ndarray, int]] = []
         n_bits = len(symbols) * (2 if hypothesis.modulation == "QPSK" else 1)
-        for phase_index in range(4 if hypothesis.modulation == "QPSK" else 2):
-            rotated = symbols * np.exp(-1j * phase_index * np.pi / 2)
+        for phase_index, angle in enumerate(phase_angles):
+            rotated = symbols * np.exp(-1j * angle)
             hard_bits = demodulate(rotated)
             # Keep the largest block the 12-row interleaver accepts (and an even
             # count for the rate-1/2 code); a residual tail is standard to drop.
@@ -46,19 +57,21 @@ def run_recovery(samples: np.ndarray, hypothesis: Hypothesis, samples_per_symbol
             candidates.append((validate_bitstream(decoded_candidate, threshold=-1).correlation_score,
                                decoded_candidate, phase_index))
         _, decoded, phase_index = max(candidates, key=lambda item: item[0])
+        phase_state_degrees = float(np.degrees(phase_angles[phase_index]))
         # Re-derive the winning carrier state so we can expose the exact
         # post-synchronization symbol cloud (timing + CFO + phase corrected)
         # that demodulation turned into bits, for the recovered constellation.
-        synchronized_symbols = symbols * np.exp(-1j * phase_index * np.pi / 2)
+        synchronized_symbols = symbols * np.exp(-1j * phase_angles[phase_index])
         tail = ""
         block = n_bits - n_bits % 12
         if block - (block % 2) < n_bits:
             tail = f"; {n_bits - (block - (block % 2))} tail bits dropped"
         steps.append((f"{hypothesis.modulation} Demodulation", "PASS",
-                      f"{n_bits} hard bits; phase state {phase_index}{tail}"))
+                      f"{n_bits} hard bits; phase state {phase_state_degrees:.0f}°{tail}"))
         steps.append(("Block De-interleaving", "PASS", "12-row block inverse"))
         steps.append(("Viterbi FEC", "PASS", f"{len(decoded)} decoded bits"))
-        return RecoveryAttempt(hypothesis, steps, decoded, synchronized_symbols=synchronized_symbols)
+        return RecoveryAttempt(hypothesis, steps, decoded, synchronized_symbols=synchronized_symbols,
+                               phase_state_degrees=phase_state_degrees)
     except Exception as exc:
         steps.append(("Recovery", "FAIL", str(exc)))
         return RecoveryAttempt(hypothesis, steps, error=str(exc))

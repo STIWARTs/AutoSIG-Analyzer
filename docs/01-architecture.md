@@ -51,7 +51,7 @@ AutoSIG is built as a **presentation layer on top of a signal-processing and ML 
 ## Component Responsibilities
 
 - **Ingestion** — reads either file type into one common in-memory representation: a complex NumPy array of samples plus a metadata dictionary (sample rate, center frequency, datatype, source format). See `08-file-formats.md`.
-- **DSP Analysis** — pure signal processing, no learned models. Produces the spectrum plot, waterfall plot, and the measurable characteristics (sample rate, bandwidth, estimated SNR, estimated symbol rate). See `02-dsp-pipeline.md`.
+- **DSP Analysis** — pure signal processing, no learned models. Produces the spectrum plot, waterfall plot, and the measurable characteristics (sample rate, bandwidth, measured carrier offset, estimated SNR, estimated symbol rate). The carrier-offset estimator is shared verbatim with the Recovery Chain's synchronization, so display and correction can never disagree. See `02-dsp-pipeline.md`.
 - **Modulation Classification** — the one place AI/ML is used for *identification*. Outputs a probability per modulation class, not a hard decision. See `03-modulation-classification.md`.
 - **Hypothesis Engine** — turns the classifier's probabilities into a short, ranked list of full configurations (modulation + interleaving + FEC) worth actually attempting recovery on. See `04-hypothesis-engine.md`.
 - **Recovery Chain** — deterministic DSP, not ML. For a given hypothesis, actually attempts synchronization, demodulation, de-interleaving, and FEC decoding. See `05-recovery-chain.md`.

@@ -7,10 +7,10 @@ Being explicit about what is and is not in the prototype is itself part of the p
 - Input: `.IQ` and `.WAV`.
 - DSP analysis: full (spectrum, waterfall, raw-vs-recovered constellation, parameter estimation, synchronization).
 - Modulation identification: QPSK and BPSK only.
-- Top-K hypothesis generation: yes, bounded to the Stage 1 candidate lists below.
+- Top-K hypothesis generation: yes, bounded to the Stage 1 candidate lists below. In practice this means **modulation is the only hypothesized, varying dimension**.
 - Demodulation supported in recovery: **QPSK and BPSK** (both fully demodulated and validated).
-- Interleaving supported in recovery: **Block** only.
-- FEC supported in recovery: **Convolutional code with Viterbi decoding** only.
+- Interleaving supported in recovery: **Block** only — a *fixed recovery configuration*, identical for every hypothesis, not a searched or independently tested dimension.
+- FEC supported in recovery: **Convolutional code with Viterbi decoding** only — likewise fixed for every hypothesis (MVP scope).
 - Bitstream correlation / header-payload identification: full, working.
 - Report generation: full, working.
 - Analysis history: full, working — every completed run (validated or all-failed) is persisted to a standard-library SQLite database (`data/autosig.db`) and replayable from the Dashboard, surviving server restarts with no external DB dependency.

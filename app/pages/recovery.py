@@ -9,12 +9,18 @@ def render() -> None:
         return
     st.markdown("<div class='screen-heading'>Hypothesis Recovery</div>", unsafe_allow_html=True)
     st.caption("Ranked from the trained classifier's real softmax output; each candidate is recovered and validated in order.")
+    # Interleaving and FEC are identical on every candidate (never varied or
+    # independently tested), so presenting them per hypothesis would imply a
+    # search that does not happen; state the fixed configuration once instead.
+    st.markdown("<div class='instrument-panel'><span class='muted'>Fixed recovery configuration (MVP scope)</span><br>"
+                "Block interleaving · Convolutional/Viterbi FEC — modulation is the only hypothesized, "
+                "varying dimension.</div>", unsafe_allow_html=True)
     for hypothesis in result.hypotheses:
         attempt = next((item for item in result.attempts if item.hypothesis.rank == hypothesis.rank), None)
         dim = " dim" if attempt and (not result.accepted or attempt is not result.accepted) else ""
         content = (f"<div class='hypothesis{dim}'><div class='hypothesis-title'>Hypothesis {hypothesis.rank}"
                    f" <span class='mono'>{hypothesis.score:.1%}</span></div><div class='hypothesis-meta'>"
-                   f"{hypothesis.modulation} · {hypothesis.interleaving} interleaving · {hypothesis.fec}</div>")
+                   f"{hypothesis.modulation} <span class='muted'>(predicted modulation)</span></div>")
         if attempt:
             for step, status, detail in attempt.steps:
                 content += ("<div style='display:flex;justify-content:space-between;align-items:center;"

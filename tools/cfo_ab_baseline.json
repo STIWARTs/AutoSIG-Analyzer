@@ -1,0 +1,2179 @@
+{
+ "tag": "baseline",
+ "rows": [
+  {
+   "file": "qpsk_000_snr-2_cfo-74.iq",
+   "label": "QPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -74.12669192031848,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 100.2391404300254,
+    "display_err": null,
+    "sync_err": 174.36583235034388
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": 34.28044392435191,
+    "display_err": null,
+    "sync_err": 108.40713584467039
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_001_snr+0_cfo+79.iq",
+   "label": "QPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 78.61993700106146,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 4.586084549224127,
+    "display_err": null,
+    "sync_err": 74.03385245183733
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": 34.52318462347332,
+    "display_err": null,
+    "sync_err": 44.09675237758814
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_002_snr+4_cfo-13.iq",
+   "label": "QPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": -12.692692303244655,
+   "iq": {
+    "display_est_hz": -12.237801272986513,
+    "sync_est_hz": 0.27649018333066355,
+    "display_err": 0.4548910302581426,
+    "sync_err": 12.969182486575319
+   },
+   "wav": {
+    "display_est_hz": -12.682924696216077,
+    "sync_est_hz": 180.0531858243443,
+    "display_err": 0.009767607028578595,
+    "sync_err": 192.74587812758895
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_003_snr+8_cfo+53.iq",
+   "label": "QPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 53.34734974234536,
+   "iq": {
+    "display_est_hz": 53.38010101607351,
+    "sync_est_hz": -76.62342984847875,
+    "display_err": 0.03275127372815234,
+    "sync_err": 129.97077959082412
+   },
+   "wav": {
+    "display_est_hz": 53.33188272109537,
+    "sync_est_hz": -73.21578594434172,
+    "display_err": 0.015467021249989443,
+    "sync_err": 126.56313568668708
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_004_snr+12_cfo+45.iq",
+   "label": "QPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": 44.70212827884521,
+   "iq": {
+    "display_est_hz": 44.66775775125081,
+    "sync_est_hz": 18.30184142196972,
+    "display_err": 0.034370527594397515,
+    "sync_err": 26.40028685687549
+   },
+   "wav": {
+    "display_est_hz": 44.625863750380546,
+    "sync_est_hz": 18.3084406845723,
+    "display_err": 0.07626452846466236,
+    "sync_err": 26.393687594272908
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_005_snr+18_cfo+53.iq",
+   "label": "QPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 52.616425254551814,
+   "iq": {
+    "display_est_hz": 52.62982534865537,
+    "sync_est_hz": 52.63417332656848,
+    "display_err": 0.013400094103559468,
+    "sync_err": 0.017748072016665617
+   },
+   "wav": {
+    "display_est_hz": 52.62220792020812,
+    "sync_est_hz": 52.631623330409944,
+    "display_err": 0.0057826656563051415,
+    "sync_err": 0.015198075858130267
+   },
+   "iq_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_006_snr-2_cfo-46.iq",
+   "label": "QPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -45.935971254171534,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 78.95847710347824,
+    "display_err": null,
+    "sync_err": 124.89444835764978
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": -19.922996646910246,
+    "display_err": null,
+    "sync_err": 26.012974607261288
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_007_snr+0_cfo-34.iq",
+   "label": "QPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": -34.009280035279,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": -73.02155018655887,
+    "display_err": null,
+    "sync_err": 39.01227015127987
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": -112.40308458238964,
+    "display_err": null,
+    "sync_err": 78.39380454711065
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_008_snr+4_cfo+60.iq",
+   "label": "QPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 60.30074385693044,
+   "iq": {
+    "display_est_hz": 60.66894932706473,
+    "sync_est_hz": 11.486033888148572,
+    "display_err": 0.36820547013429206,
+    "sync_err": 48.81470996878187
+   },
+   "wav": {
+    "display_est_hz": 60.87806468095743,
+    "sync_est_hz": -21.15727381754126,
+    "display_err": 0.5773208240269909,
+    "sync_err": 81.4580176744717
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_009_snr+8_cfo+19.iq",
+   "label": "QPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 19.44626053016752,
+   "iq": {
+    "display_est_hz": 19.209264241384737,
+    "sync_est_hz": 60.97778255179403,
+    "display_err": 0.2369962887827839,
+    "sync_err": 41.53152202162651
+   },
+   "wav": {
+    "display_est_hz": 19.2881708005161,
+    "sync_est_hz": 58.03776251864884,
+    "display_err": 0.15808972965142232,
+    "sync_err": 38.59150198848132
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_010_snr+12_cfo-71.iq",
+   "label": "QPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": -71.47518188925825,
+   "iq": {
+    "display_est_hz": -71.22098341245542,
+    "sync_est_hz": -62.69047143052299,
+    "display_err": 0.25419847680282714,
+    "sync_err": 8.784710458735262
+   },
+   "wav": {
+    "display_est_hz": -71.24126732180063,
+    "sync_est_hz": -62.697374529378074,
+    "display_err": 0.2339145674576173,
+    "sync_err": 8.777807359880178
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_011_snr+18_cfo+8.iq",
+   "label": "QPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 8.009491065700828,
+   "iq": {
+    "display_est_hz": 7.8176915589155564,
+    "sync_est_hz": 7.94420497506768,
+    "display_err": 0.19179950678527202,
+    "sync_err": 0.0652860906331485
+   },
+   "wav": {
+    "display_est_hz": 7.744242902845143,
+    "sync_est_hz": 7.965172179320705,
+    "display_err": 0.2652481628556851,
+    "sync_err": 0.0443188863801236
+   },
+   "iq_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_012_snr-2_cfo+79.iq",
+   "label": "QPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": 78.79786043016475,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 66.72076186094776,
+    "display_err": null,
+    "sync_err": 12.077098569216986
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": 103.82402747461393,
+    "display_err": null,
+    "sync_err": 25.02616704444918
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_013_snr+0_cfo+67.iq",
+   "label": "QPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 66.56226606377237,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": -14.675888777076075,
+    "display_err": null,
+    "sync_err": 81.23815484084844
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": 38.235637811759396,
+    "display_err": null,
+    "sync_err": 28.326628252012974
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_014_snr+4_cfo+42.iq",
+   "label": "QPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 42.41596022517581,
+   "iq": {
+    "display_est_hz": 42.04587550890265,
+    "sync_est_hz": 56.24037047079841,
+    "display_err": 0.370084716273162,
+    "sync_err": 13.824410245622602
+   },
+   "wav": {
+    "display_est_hz": 42.16770274621067,
+    "sync_est_hz": 42.47052692313998,
+    "display_err": 0.2482574789651366,
+    "sync_err": 0.054566697964169464
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_015_snr+8_cfo+26.iq",
+   "label": "QPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 25.696466445651197,
+   "iq": {
+    "display_est_hz": 25.639225319592338,
+    "sync_est_hz": -5.154943218273215,
+    "display_err": 0.05724112605885878,
+    "sync_err": 30.85140966392441
+   },
+   "wav": {
+    "display_est_hz": 25.70493956745574,
+    "sync_est_hz": 46.77989012714417,
+    "display_err": 0.008473121804541961,
+    "sync_err": 21.083423681492974
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_016_snr+12_cfo+32.iq",
+   "label": "QPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": 32.286743102480315,
+   "iq": {
+    "display_est_hz": 32.131971255170576,
+    "sync_est_hz": 37.50767574269912,
+    "display_err": 0.15477184730973903,
+    "sync_err": 5.220932640218805
+   },
+   "wav": {
+    "display_est_hz": 32.15139116527456,
+    "sync_est_hz": 37.504104685401,
+    "display_err": 0.13535193720575478,
+    "sync_err": 5.217361582920688
+   },
+   "iq_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 0.938,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 0.938,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_017_snr+18_cfo+27.iq",
+   "label": "QPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 26.54958777339256,
+   "iq": {
+    "display_est_hz": 26.418020080944352,
+    "sync_est_hz": 26.43776919279838,
+    "display_err": 0.13156769244820765,
+    "sync_err": 0.11181858059417848
+   },
+   "wav": {
+    "display_est_hz": 26.430858066305515,
+    "sync_est_hz": 26.434102889536327,
+    "display_err": 0.118729707087045,
+    "sync_err": 0.11548488385623301
+   },
+   "iq_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_018_snr-2_cfo-29.iq",
+   "label": "QPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -29.21697117875909,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 92.07166483653626,
+    "display_err": null,
+    "sync_err": 121.28863601529534
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": 53.92990974323967,
+    "display_err": null,
+    "sync_err": 83.14688092199876
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_019_snr+0_cfo+55.iq",
+   "label": "QPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 55.190008979877746,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 31.506081516415215,
+    "display_err": null,
+    "sync_err": 23.68392746346253
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": 29.323539063517927,
+    "display_err": null,
+    "sync_err": 25.86646991635982
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_020_snr+4_cfo-49.iq",
+   "label": "QPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": -48.645431342467944,
+   "iq": {
+    "display_est_hz": -48.70757028799165,
+    "sync_est_hz": -105.12467047268065,
+    "display_err": 0.06213894552370647,
+    "sync_err": 56.479239130212704
+   },
+   "wav": {
+    "display_est_hz": -48.52910448486606,
+    "sync_est_hz": -52.43810616410966,
+    "display_err": 0.11632685760188366,
+    "sync_err": 3.792674821641718
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_021_snr+8_cfo+36.iq",
+   "label": "QPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 36.37724497674817,
+   "iq": {
+    "display_est_hz": 36.14732929307854,
+    "sync_est_hz": -35.431088011645855,
+    "display_err": 0.22991568366963122,
+    "sync_err": 71.80833298839403
+   },
+   "wav": {
+    "display_est_hz": 36.299029816732265,
+    "sync_est_hz": -34.600604724700815,
+    "display_err": 0.07821516001590822,
+    "sync_err": 70.97784970144899
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.688,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_022_snr+12_cfo-26.iq",
+   "label": "QPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": -26.3538392072412,
+   "iq": {
+    "display_est_hz": -26.256873582800225,
+    "sync_est_hz": -40.59677166707816,
+    "display_err": 0.09696562444097623,
+    "sync_err": 14.242932459836958
+   },
+   "wav": {
+    "display_est_hz": -26.287318842316214,
+    "sync_est_hz": -40.595460677945056,
+    "display_err": 0.06652036492498681,
+    "sync_err": 14.241621470703855
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_023_snr+18_cfo+75.iq",
+   "label": "QPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 75.45434659150462,
+   "iq": {
+    "display_est_hz": 75.48175340123248,
+    "sync_est_hz": 75.46624522461191,
+    "display_err": 0.027406809727864356,
+    "sync_err": 0.011898633107293222
+   },
+   "wav": {
+    "display_est_hz": 75.47545641886465,
+    "sync_est_hz": 75.46964866957823,
+    "display_err": 0.021109827360035638,
+    "sync_err": 0.015302078073617054
+   },
+   "iq_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_024_snr-2_cfo-49.iq",
+   "label": "QPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -48.52951468975337,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 42.898774187332045,
+    "display_err": null,
+    "sync_err": 91.42828887708541
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": -47.00473350576171,
+    "display_err": null,
+    "sync_err": 1.5247811839916565
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_025_snr+0_cfo+46.iq",
+   "label": "QPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 46.43581384379206,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 163.25208955385122,
+    "display_err": null,
+    "sync_err": 116.81627571005916
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": -35.29324206076935,
+    "display_err": null,
+    "sync_err": 81.72905590456142
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_026_snr+4_cfo+10.iq",
+   "label": "QPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 10.084195582638358,
+   "iq": {
+    "display_est_hz": 9.805548258803107,
+    "sync_est_hz": -36.25339687630821,
+    "display_err": 0.27864732383525137,
+    "sync_err": 46.33759245894657
+   },
+   "wav": {
+    "display_est_hz": 9.75267941865957,
+    "sync_est_hz": 58.84536972911397,
+    "display_err": 0.33151616397878847,
+    "sync_err": 48.76117414647561
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_027_snr+8_cfo-38.iq",
+   "label": "QPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": -37.502519492015615,
+   "iq": {
+    "display_est_hz": -37.34355219498728,
+    "sync_est_hz": 30.963014168032966,
+    "display_err": 0.15896729702833312,
+    "sync_err": 68.46553366004858
+   },
+   "wav": {
+    "display_est_hz": -37.368570228643485,
+    "sync_est_hz": 1.9753528419340138,
+    "display_err": 0.13394926337213064,
+    "sync_err": 39.47787233394963
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_028_snr+12_cfo+82.iq",
+   "label": "QPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": 82.07354882418187,
+   "iq": {
+    "display_est_hz": 82.01061928588331,
+    "sync_est_hz": 65.42348495404518,
+    "display_err": 0.06292953829856174,
+    "sync_err": 16.65006387013669
+   },
+   "wav": {
+    "display_est_hz": 81.99842432231613,
+    "sync_est_hz": 65.4324071679815,
+    "display_err": 0.07512450186574426,
+    "sync_err": 16.641141656200375
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_029_snr+18_cfo+2.iq",
+   "label": "QPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 1.823810196905086,
+   "iq": {
+    "display_est_hz": 5.392458910743395,
+    "sync_est_hz": 1.8196975664318245,
+    "display_err": 3.568648713838309,
+    "sync_err": 0.0041126304732614916
+   },
+   "wav": {
+    "display_est_hz": 5.40854073496479,
+    "sync_est_hz": 1.8101099273370505,
+    "display_err": 3.584730538059704,
+    "sync_err": 0.013700269568035495
+   },
+   "iq_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "QPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_030_snr-2_cfo+73.iq",
+   "label": "QPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": 72.9436476986105,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": -72.57212087440996,
+    "display_err": null,
+    "sync_err": 145.51576857302047
+   },
+   "wav": {
+    "display_est_hz": null,
+    "sync_est_hz": -239.9397586750824,
+    "display_err": null,
+    "sync_err": 312.8834063736929
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "qpsk_031_snr+0_cfo-76.iq",
+   "label": "QPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": -76.42336825694149,
+   "iq": {
+    "display_est_hz": null,
+    "sync_est_hz": 40.25997915101586,
+    "display_err": null,
+    "sync_err": 116.68334740795734
+   },
+   "wav": {
+    "display_est_hz": -75.4358060375759,
+    "sync_est_hz": -98.96551234619781,
+    "display_err": 0.9875622193655857,
+    "sync_err": 22.542144089256325
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_000_snr-2_cfo-78.iq",
+   "label": "BPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -78.068956814555,
+   "iq": {
+    "display_est_hz": -77.75576750634971,
+    "sync_est_hz": 103.81237247611668,
+    "display_err": 0.31318930820528124,
+    "sync_err": 181.88132929067166
+   },
+   "wav": {
+    "display_est_hz": -77.86943028314094,
+    "sync_est_hz": 56.15856528723675,
+    "display_err": 0.19952653141405108,
+    "sync_err": 134.22752210179175
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_001_snr+0_cfo+17.iq",
+   "label": "BPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 17.130900061230506,
+   "iq": {
+    "display_est_hz": 17.15449329860734,
+    "sync_est_hz": -50.55315285358552,
+    "display_err": 0.023593237376832832,
+    "sync_err": 67.68405291481602
+   },
+   "wav": {
+    "display_est_hz": 17.18250379869432,
+    "sync_est_hz": -11.314314116329903,
+    "display_err": 0.051603737463814525,
+    "sync_err": 28.44521417756041
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_002_snr+4_cfo-4.iq",
+   "label": "BPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": -3.8988202523502906,
+   "iq": {
+    "display_est_hz": -5.963187269640692,
+    "sync_est_hz": 120.48374913885698,
+    "display_err": 2.064367017290401,
+    "sync_err": 124.38256939120727
+   },
+   "wav": {
+    "display_est_hz": -6.190221276924465,
+    "sync_est_hz": 98.32967214428523,
+    "display_err": 2.2914010245741743,
+    "sync_err": 102.22849239663552
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_003_snr+8_cfo+75.iq",
+   "label": "BPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 74.99584151594303,
+   "iq": {
+    "display_est_hz": 75.00768771790194,
+    "sync_est_hz": 93.67402153329861,
+    "display_err": 0.01184620195891739,
+    "sync_err": 18.678180017355587
+   },
+   "wav": {
+    "display_est_hz": 75.02933972599831,
+    "sync_est_hz": 93.67389213975052,
+    "display_err": 0.03349821005528497,
+    "sync_err": 18.678050623807493
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_004_snr+12_cfo-67.iq",
+   "label": "BPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": -66.86948358074017,
+   "iq": {
+    "display_est_hz": -66.84639445985809,
+    "sync_est_hz": -66.84428044201472,
+    "display_err": 0.023089120882076486,
+    "sync_err": 0.025203138725444774
+   },
+   "wav": {
+    "display_est_hz": -66.84719528438467,
+    "sync_est_hz": -66.84966580587246,
+    "display_err": 0.022288296355498005,
+    "sync_err": 0.019817774867703974
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_005_snr+18_cfo+50.iq",
+   "label": "BPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 50.2491590819304,
+   "iq": {
+    "display_est_hz": 50.23455522799243,
+    "sync_est_hz": 50.23211728531169,
+    "display_err": 0.014603853937970257,
+    "sync_err": 0.01704179661871308
+   },
+   "wav": {
+    "display_est_hz": 50.23262245143115,
+    "sync_est_hz": 50.231996303523395,
+    "display_err": 0.016536630499253135,
+    "sync_err": 0.01716277840700542
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_006_snr-2_cfo+69.iq",
+   "label": "BPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": 69.38430046602224,
+   "iq": {
+    "display_est_hz": 69.31979539380832,
+    "sync_est_hz": 43.54919468164471,
+    "display_err": 0.06450507221391888,
+    "sync_err": 25.835105784377532
+   },
+   "wav": {
+    "display_est_hz": 69.38583835620771,
+    "sync_est_hz": -24.995207266816656,
+    "display_err": 0.0015378901854745664,
+    "sync_err": 94.3795077328389
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_007_snr+0_cfo+42.iq",
+   "label": "BPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 42.27021920799375,
+   "iq": {
+    "display_est_hz": 42.14172545030261,
+    "sync_est_hz": 127.16314034775156,
+    "display_err": 0.1284937576911389,
+    "sync_err": 84.89292113975782
+   },
+   "wav": {
+    "display_est_hz": 42.230376381088384,
+    "sync_est_hz": 114.6254615831468,
+    "display_err": 0.03984282690536389,
+    "sync_err": 72.35524237515305
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_008_snr+4_cfo+31.iq",
+   "label": "BPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 31.10688312258104,
+   "iq": {
+    "display_est_hz": 31.05634000773231,
+    "sync_est_hz": 9.45555434401873,
+    "display_err": 0.050543114848728976,
+    "sync_err": 21.65132877856231
+   },
+   "wav": {
+    "display_est_hz": 31.050682194869623,
+    "sync_est_hz": 44.92500592305303,
+    "display_err": 0.056200927711415716,
+    "sync_err": 13.81812280047199
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_009_snr+8_cfo+81.iq",
+   "label": "BPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 80.7703627762435,
+   "iq": {
+    "display_est_hz": 80.86383726560707,
+    "sync_est_hz": 84.74689985722262,
+    "display_err": 0.09347448936357239,
+    "sync_err": 3.9765370809791136
+   },
+   "wav": {
+    "display_est_hz": 80.87340217422354,
+    "sync_est_hz": 83.76302519337094,
+    "display_err": 0.1030393979800408,
+    "sync_err": 2.992662417127434
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_010_snr+12_cfo+38.iq",
+   "label": "BPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": 37.684742087771696,
+   "iq": {
+    "display_est_hz": 37.67762127134836,
+    "sync_est_hz": 37.67132150971409,
+    "display_err": 0.007120816423338283,
+    "sync_err": 0.013420578057605326
+   },
+   "wav": {
+    "display_est_hz": 37.680276062791094,
+    "sync_est_hz": 37.667585423661954,
+    "display_err": 0.004466024980601446,
+    "sync_err": 0.01715666410974137
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_011_snr+18_cfo+79.iq",
+   "label": "BPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": 78.95745309502024,
+   "iq": {
+    "display_est_hz": 78.94229733695586,
+    "sync_est_hz": 78.9434771743742,
+    "display_err": 0.015155758064381075,
+    "sync_err": 0.013975920646046802
+   },
+   "wav": {
+    "display_est_hz": 78.94037342206998,
+    "sync_est_hz": 78.9419305764087,
+    "display_err": 0.017079672950259805,
+    "sync_err": 0.015522518611547298
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_012_snr-2_cfo-63.iq",
+   "label": "BPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -62.58967924984761,
+   "iq": {
+    "display_est_hz": -62.480455380864434,
+    "sync_est_hz": -16.4851734319703,
+    "display_err": 0.10922386898317882,
+    "sync_err": 46.10450581787731
+   },
+   "wav": {
+    "display_est_hz": -62.52146944064985,
+    "sync_est_hz": 16.751558501642826,
+    "display_err": 0.06820980919776076,
+    "sync_err": 79.34123775149044
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.625,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_013_snr+0_cfo+52.iq",
+   "label": "BPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 51.98936848134494,
+   "iq": {
+    "display_est_hz": 51.769223656844005,
+    "sync_est_hz": 184.70944212667652,
+    "display_err": 0.22014482450093453,
+    "sync_err": 132.72007364533158
+   },
+   "wav": {
+    "display_est_hz": 51.854015864206076,
+    "sync_est_hz": 233.33002418337153,
+    "display_err": 0.1353526171388637,
+    "sync_err": 181.3406557020266
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_014_snr+4_cfo+3.iq",
+   "label": "BPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 2.8909850844283937,
+   "iq": {
+    "display_est_hz": 5.699316958656929,
+    "sync_est_hz": -80.32705016716098,
+    "display_err": 2.8083318742285357,
+    "sync_err": 83.21803525158937
+   },
+   "wav": {
+    "display_est_hz": 5.787008032767158,
+    "sync_est_hz": -28.407088536517055,
+    "display_err": 2.8960229483387643,
+    "sync_err": 31.29807362094545
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_015_snr+8_cfo+36.iq",
+   "label": "BPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 35.66829760311683,
+   "iq": {
+    "display_est_hz": 35.69113090634346,
+    "sync_est_hz": 27.70149933825428,
+    "display_err": 0.02283330322663346,
+    "sync_err": 7.966798264862547
+   },
+   "wav": {
+    "display_est_hz": 35.68503305767522,
+    "sync_est_hz": 27.699981810636643,
+    "display_err": 0.016735454558393315,
+    "sync_err": 7.968315792480183
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.75,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_016_snr+12_cfo+70.iq",
+   "label": "BPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": 69.65128089021579,
+   "iq": {
+    "display_est_hz": 69.67387035150419,
+    "sync_est_hz": 69.68053329881803,
+    "display_err": 0.022589461288404777,
+    "sync_err": 0.02925240860224676
+   },
+   "wav": {
+    "display_est_hz": 69.6746071405483,
+    "sync_est_hz": 69.6823353029752,
+    "display_err": 0.02332625033251645,
+    "sync_err": 0.031054412759417005
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_017_snr+18_cfo-9.iq",
+   "label": "BPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": -9.155262437578116,
+   "iq": {
+    "display_est_hz": -8.930310183628038,
+    "sync_est_hz": -9.150062238946871,
+    "display_err": 0.22495225395007878,
+    "sync_err": 0.005200198631245101
+   },
+   "wav": {
+    "display_est_hz": -8.928064736678744,
+    "sync_est_hz": -9.146580528508926,
+    "display_err": 0.22719770089937263,
+    "sync_err": 0.008681909069190752
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_018_snr-2_cfo+31.iq",
+   "label": "BPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": 30.84000237547376,
+   "iq": {
+    "display_est_hz": 30.84823658520525,
+    "sync_est_hz": -13.513098565504672,
+    "display_err": 0.008234209731490694,
+    "sync_err": 44.35310094097843
+   },
+   "wav": {
+    "display_est_hz": 30.82121922775651,
+    "sync_est_hz": 26.587532619828252,
+    "display_err": 0.018783147717247317,
+    "sync_err": 4.252469755645507
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_019_snr+0_cfo-58.iq",
+   "label": "BPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": -58.07063926176684,
+   "iq": {
+    "display_est_hz": -58.09301202834555,
+    "sync_est_hz": 52.16749930091411,
+    "display_err": 0.02237276657870524,
+    "sync_err": 110.23813856268094
+   },
+   "wav": {
+    "display_est_hz": -58.11728443950414,
+    "sync_est_hz": 81.24396394629332,
+    "display_err": 0.046645177737296706,
+    "sync_err": 139.31460320806016
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_020_snr+4_cfo+33.iq",
+   "label": "BPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 32.86322089674576,
+   "iq": {
+    "display_est_hz": 32.759763300418854,
+    "sync_est_hz": 63.18749028102225,
+    "display_err": 0.10345759632690488,
+    "sync_err": 30.32426938427649
+   },
+   "wav": {
+    "display_est_hz": 32.77519720634727,
+    "sync_est_hz": 50.70135103476319,
+    "display_err": 0.08802369039848656,
+    "sync_err": 17.838130138017434
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_021_snr+8_cfo-19.iq",
+   "label": "BPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": -18.992065772203432,
+   "iq": {
+    "display_est_hz": -19.04107714212979,
+    "sync_est_hz": -19.09928930058879,
+    "display_err": 0.04901136992635813,
+    "sync_err": 0.10722352838535798
+   },
+   "wav": {
+    "display_est_hz": -19.01316026818346,
+    "sync_est_hz": -19.08169433377279,
+    "display_err": 0.02109449598002655,
+    "sync_err": 0.08962856156935928
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_022_snr+12_cfo-14.iq",
+   "label": "BPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": -14.351291592506513,
+   "iq": {
+    "display_est_hz": -14.435513424828196,
+    "sync_est_hz": -14.36201596484857,
+    "display_err": 0.08422183232168301,
+    "sync_err": 0.010724372342057364
+   },
+   "wav": {
+    "display_est_hz": -14.40866161702257,
+    "sync_est_hz": -14.354249242824276,
+    "display_err": 0.05737002451605733,
+    "sync_err": 0.002957650317762628
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_023_snr+18_cfo-1.iq",
+   "label": "BPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": -0.5629145982888843,
+   "iq": {
+    "display_est_hz": 5.04726730287075,
+    "sync_est_hz": -0.5636542276074769,
+    "display_err": 5.610181901159635,
+    "sync_err": 0.0007396293185925051
+   },
+   "wav": {
+    "display_est_hz": 5.043245964881145,
+    "sync_est_hz": -0.5731481794548144,
+    "display_err": 5.60616056317003,
+    "sync_err": 0.010233581165930095
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_024_snr-2_cfo-44.iq",
+   "label": "BPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": -44.23414174462756,
+   "iq": {
+    "display_est_hz": -43.83533628601016,
+    "sync_est_hz": 172.5149883061844,
+    "display_err": 0.3988054586173959,
+    "sync_err": 216.74913005081194
+   },
+   "wav": {
+    "display_est_hz": -43.89953401617028,
+    "sync_est_hz": 260.05287020204156,
+    "display_err": 0.3346077284572786,
+    "sync_err": 304.2870119466691
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_025_snr+0_cfo+1.iq",
+   "label": "BPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 1.2515573311094954,
+   "iq": {
+    "display_est_hz": 4.981610359567584,
+    "sync_est_hz": -29.720765492553664,
+    "display_err": 3.730053028458088,
+    "sync_err": 30.97232282366316
+   },
+   "wav": {
+    "display_est_hz": 4.986548965627496,
+    "sync_est_hz": 72.99927865502154,
+    "display_err": 3.7349916345180008,
+    "sync_err": 71.74772132391205
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_026_snr+4_cfo+3.iq",
+   "label": "BPSK",
+   "snr_db": 4.0,
+   "true_cfo_hz": 2.8019922109544666,
+   "iq": {
+    "display_est_hz": 5.676148645844395,
+    "sync_est_hz": -14.148196213758965,
+    "display_err": 2.8741564348899287,
+    "sync_err": 16.95018842471343
+   },
+   "wav": {
+    "display_est_hz": 5.765805874640742,
+    "sync_est_hz": -38.11545121032291,
+    "display_err": 2.9638136636862757,
+    "sync_err": 40.917443421277376
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_027_snr+8_cfo+40.iq",
+   "label": "BPSK",
+   "snr_db": 8.0,
+   "true_cfo_hz": 40.22460546059585,
+   "iq": {
+    "display_est_hz": 40.27437125191544,
+    "sync_est_hz": 30.365060479198316,
+    "display_err": 0.04976579131958658,
+    "sync_err": 9.859544981397537
+   },
+   "wav": {
+    "display_est_hz": 40.27402759388541,
+    "sync_est_hz": 30.361440285691696,
+    "display_err": 0.04942213328955347,
+    "sync_err": 9.863165174904157
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.562,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_028_snr+12_cfo-14.iq",
+   "label": "BPSK",
+   "snr_db": 12.0,
+   "true_cfo_hz": -13.82709161111869,
+   "iq": {
+    "display_est_hz": -13.922385532747613,
+    "sync_est_hz": -13.815320506280731,
+    "display_err": 0.09529392162892414,
+    "sync_err": 0.01177110483795829
+   },
+   "wav": {
+    "display_est_hz": -13.909617015583947,
+    "sync_est_hz": -13.809776027482675,
+    "display_err": 0.08252540446525813,
+    "sync_err": 0.017315583636014154
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_029_snr+18_cfo-56.iq",
+   "label": "BPSK",
+   "snr_db": 18.0,
+   "true_cfo_hz": -56.067431002814686,
+   "iq": {
+    "display_est_hz": -56.05314275475614,
+    "sync_est_hz": -56.05877715292575,
+    "display_err": 0.014288248058548447,
+    "sync_err": 0.008653849888936804
+   },
+   "wav": {
+    "display_est_hz": -56.05139315241214,
+    "sync_est_hz": -56.05755234639035,
+    "display_err": 0.01603785040254735,
+    "sync_err": 0.009878656424334054
+   },
+   "iq_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": "BPSK",
+    "true_validated": true,
+    "true_corr": 1.0,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_030_snr-2_cfo+62.iq",
+   "label": "BPSK",
+   "snr_db": -2.0,
+   "true_cfo_hz": 62.37610024795947,
+   "iq": {
+    "display_est_hz": 62.33906563879413,
+    "sync_est_hz": 123.08490398911106,
+    "display_err": 0.03703460916533885,
+    "sync_err": 60.708803741151584
+   },
+   "wav": {
+    "display_est_hz": 62.44449365079741,
+    "sync_est_hz": 98.10006905287491,
+    "display_err": 0.06839340283794115,
+    "sync_err": 35.723968804915444
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.438,
+    "abs_freq_flag": 0.0
+   }
+  },
+  {
+   "file": "bpsk_031_snr+0_cfo+68.iq",
+   "label": "BPSK",
+   "snr_db": 0.0,
+   "true_cfo_hz": 68.29166642550095,
+   "iq": {
+    "display_est_hz": 68.23280218029112,
+    "sync_est_hz": 188.9267636039887,
+    "display_err": 0.05886424520983269,
+    "sync_err": 120.63509717848774
+   },
+   "wav": {
+    "display_est_hz": 68.08189026813841,
+    "sync_est_hz": 187.118672092566,
+    "display_err": 0.20977615736254052,
+    "sync_err": 118.82700566706504
+   },
+   "iq_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   },
+   "wav_pipeline": {
+    "accepted": null,
+    "true_validated": false,
+    "true_corr": 0.5,
+    "abs_freq_flag": 0.0
+   }
+  }
+ ],
+ "summary": {
+  "-2.0": {
+   "iq_display": {
+    "n": 12,
+    "n_refused_or_missing": 6,
+    "median_abs_err_hz": 0.0869,
+    "max_abs_err_hz": 0.3988
+   },
+   "iq_sync": {
+    "n": 12,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 106.3585,
+    "max_abs_err_hz": 216.7491
+   },
+   "wav_display": {
+    "n": 12,
+    "n_refused_or_missing": 6,
+    "median_abs_err_hz": 0.0683,
+    "max_abs_err_hz": 0.3346
+   },
+   "wav_sync": {
+    "n": 12,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 81.2441,
+    "max_abs_err_hz": 312.8834
+   },
+   "iq_pipeline": {
+    "n": 12,
+    "accepted_true_mod": 0,
+    "true_mod_validated": 0
+   },
+   "wav_pipeline": {
+    "n": 12,
+    "accepted_true_mod": 0,
+    "true_mod_validated": 0
+   }
+  },
+  "0.0": {
+   "iq_display": {
+    "n": 12,
+    "n_refused_or_missing": 6,
+    "median_abs_err_hz": 0.0937,
+    "max_abs_err_hz": 3.7301
+   },
+   "iq_sync": {
+    "n": 12,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 83.0655,
+    "max_abs_err_hz": 132.7201
+   },
+   "wav_display": {
+    "n": 12,
+    "n_refused_or_missing": 5,
+    "median_abs_err_hz": 0.1354,
+    "max_abs_err_hz": 3.735
+   },
+   "wav_sync": {
+    "n": 12,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 72.0515,
+    "max_abs_err_hz": 181.3407
+   },
+   "iq_pipeline": {
+    "n": 12,
+    "accepted_true_mod": 0,
+    "true_mod_validated": 0
+   },
+   "wav_pipeline": {
+    "n": 12,
+    "accepted_true_mod": 0,
+    "true_mod_validated": 0
+   }
+  },
+  "4.0": {
+   "iq_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.3691,
+    "max_abs_err_hz": 2.8742
+   },
+   "iq_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 38.3309,
+    "max_abs_err_hz": 124.3826
+   },
+   "wav_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.2899,
+    "max_abs_err_hz": 2.9638
+   },
+   "wav_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 36.1078,
+    "max_abs_err_hz": 192.7459
+   },
+   "iq_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 0,
+    "true_mod_validated": 0
+   },
+   "wav_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 1,
+    "true_mod_validated": 1
+   }
+  },
+  "8.0": {
+   "iq_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0535,
+    "max_abs_err_hz": 0.237
+   },
+   "iq_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 24.7648,
+    "max_abs_err_hz": 129.9708
+   },
+   "wav_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0415,
+    "max_abs_err_hz": 0.1581
+   },
+   "wav_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 19.8807,
+    "max_abs_err_hz": 126.5631
+   },
+   "iq_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 2,
+    "true_mod_validated": 2
+   },
+   "wav_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 2,
+    "true_mod_validated": 2
+   }
+  },
+  "12.0": {
+   "iq_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0736,
+    "max_abs_err_hz": 0.2542
+   },
+   "iq_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 2.6251,
+    "max_abs_err_hz": 26.4003
+   },
+   "wav_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0708,
+    "max_abs_err_hz": 0.2339
+   },
+   "wav_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 2.6242,
+    "max_abs_err_hz": 26.3937
+   },
+   "iq_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 6,
+    "true_mod_validated": 6
+   },
+   "wav_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 6,
+    "true_mod_validated": 6
+   }
+  },
+  "18.0": {
+   "iq_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0795,
+    "max_abs_err_hz": 5.6102
+   },
+   "iq_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0129,
+    "max_abs_err_hz": 0.1118
+   },
+   "wav_display": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0699,
+    "max_abs_err_hz": 5.6062
+   },
+   "wav_sync": {
+    "n": 10,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 0.0153,
+    "max_abs_err_hz": 0.1155
+   },
+   "iq_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 10,
+    "true_mod_validated": 10
+   },
+   "wav_pipeline": {
+    "n": 10,
+    "accepted_true_mod": 10,
+    "true_mod_validated": 10
+   }
+  },
+  "ALL": {
+   "iq_display": {
+    "n": 64,
+    "n_refused_or_missing": 12,
+    "median_abs_err_hz": 0.0944,
+    "max_abs_err_hz": 5.6102
+   },
+   "iq_sync": {
+    "n": 64,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 28.3623,
+    "max_abs_err_hz": 216.7491
+   },
+   "wav_display": {
+    "n": 64,
+    "n_refused_or_missing": 11,
+    "median_abs_err_hz": 0.0763,
+    "max_abs_err_hz": 5.6062
+   },
+   "wav_sync": {
+    "n": 64,
+    "n_refused_or_missing": 0,
+    "median_abs_err_hz": 23.7842,
+    "max_abs_err_hz": 312.8834
+   },
+   "iq_pipeline": {
+    "n": 64,
+    "accepted_true_mod": 18,
+    "true_mod_validated": 18
+   },
+   "wav_pipeline": {
+    "n": 64,
+    "accepted_true_mod": 19,
+    "true_mod_validated": 19
+   }
+  }
+ }
+}

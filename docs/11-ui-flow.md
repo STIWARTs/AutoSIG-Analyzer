@@ -19,27 +19,31 @@ Displays the output of the DSP pipeline (`02-dsp-pipeline.md`):
 - Spectrum (PSD) plot.
 - Waterfall (spectrogram) plot.
 - Constellation plot, labelled **Raw I/Q (pre-synchronization)** — the diffuse ring of uncorrected samples, shown before carrier/timing/phase recovery.
-- A parameter card: sample rate, bandwidth, center frequency, estimated SNR, estimated symbol rate.
+- A parameter card: sample rate, bandwidth, center frequency (qualified “(relative to baseband)” when no genuine nonzero RF anchor is known — see `02-dsp-pipeline.md`), estimated SNR, estimated symbol rate. The displayed carrier offset is the exact value the Recovery Chain corrects against (one shared estimator).
 - The modulation classifier's confidence scores (`03-modulation-classification.md`), shown as a simple bar or ranked list.
 
 ## 4. Recovery
 
-Displays the Hypothesis Engine's ranked list (`04-hypothesis-engine.md`) and, as each is attempted, the live status of its Recovery Chain steps (`05-recovery-chain.md`):
+Displays the Hypothesis Engine's ranked list (`04-hypothesis-engine.md`) and, as each is attempted, the live status of its Recovery Chain steps (`05-recovery-chain.md`). Modulation is the only hypothesized dimension; interleaving/FEC appear once per screen as a "fixed recovery configuration (MVP scope)" note:
 
 ```
-Hypothesis #1 — QPSK + Block + Viterbi
-  Synchronization        PASS
+Fixed recovery configuration: Block interleaving · Convolutional/Viterbi FEC (MVP scope)
+
+Hypothesis #1 — QPSK (predicted modulation)
+  Synchronization        PASS     CFO 0.00689 rad/sample
   QPSK Demodulation       PASS
   Block De-interleaving   PASS
   Viterbi FEC             PASS
   Frame Validation         FAIL
   → trying next hypothesis...
 
-Hypothesis #2 — QPSK + Diagonal + Viterbi
+Hypothesis #2 — BPSK (predicted modulation)
   ...
   Frame Validation         PASS
   ✓ Validated Recovery
 ```
+
+When the shared CFO estimator refuses to lock on a too-weak signal, the Synchronization step shows `WARN — NO LOCK` and the attempt continues without frequency correction (never a silent 0 Hz), so Frame Validation remains the judge (`05-recovery-chain.md`).
 
 This screen is the emotional core of the demo — it should visibly show the fail-then-pass sequence rather than just a final result.
 

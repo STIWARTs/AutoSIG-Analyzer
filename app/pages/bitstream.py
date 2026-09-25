@@ -32,7 +32,10 @@ def render() -> None:
                        "Analysis screen.")
             rows = [("Modulation", accepted.hypothesis.modulation),
                     ("Symbols plotted", f"{len(symbols):,}"),
-                    ("Phase state", f"{accepted.hypothesis.rank}")]
+                    # The resolved carrier phase state from the demodulation step
+                    # (QPSK: 0/90/180/270°, BPSK: 0/180°), not the hypothesis rank.
+                    ("Phase state", "—" if accepted.phase_state_degrees is None
+                     else f"{accepted.phase_state_degrees:.0f}°")]
             table = "".join(f"<tr><td class='label'>{k}</td><td class='value'>{v}</td></tr>" for k, v in rows)
             st.markdown("<div class='instrument-panel'><table class='measurement'>" + table + "</table></div>",
                         unsafe_allow_html=True)

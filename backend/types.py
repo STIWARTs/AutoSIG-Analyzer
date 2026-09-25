@@ -45,6 +45,10 @@ class RecoveryAttempt:
     # step (before demodulation collapses them to bits). Exposed so the UI can
     # render a "recovered symbols" constellation as evidence of the sync stage.
     synchronized_symbols: np.ndarray | None = None
+    # Resolved carrier phase state in degrees chosen by the demodulation
+    # ambiguity search (QPSK: 0/90/180/270, BPSK: 0/180). None until the
+    # demodulation step has run.
+    phase_state_degrees: float | None = None
 
 
 @dataclass

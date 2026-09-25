@@ -49,6 +49,7 @@ def apply_theme() -> None:
     .hypothesis.dim {{ opacity:.48; }} .hypothesis-title {{ color:var(--text); font-weight:600; }} .hypothesis-meta {{ color:var(--muted); font-size:.83rem; }}
     .status {{ display:inline-block; min-width:76px; text-align:center; border:1px solid currentColor; border-radius:2px; padding:2px 6px; font:600 .72rem 'IBM Plex Mono',monospace; }}
     .status-pass {{ color:var(--ok); }} .status-fail {{ color:var(--bad); }} .status-in-progress {{ color:var(--warn); }}
+    .status-warn {{ color:var(--warn); }}
     .correlation-value {{ color:var(--accent); font:600 clamp(3rem,8vw,6.5rem) 'IBM Plex Mono',monospace; letter-spacing:-.08em; line-height:1; font-variant-numeric:tabular-nums; }}
     .bitstream {{ font:400 .84rem/1.55 'IBM Plex Mono',monospace; word-break:break-all; border:1px solid var(--line); border-radius:2px; overflow:hidden; }}
     .bit-header {{ background:var(--header-tint); padding:12px; }} .bit-payload {{ background:var(--surface); padding:12px; border-top:1px solid var(--line); }}
@@ -66,5 +67,6 @@ def apply_theme() -> None:
 
 
 def status_badge(status: str) -> str:
-    classes = {"PASS": "status-pass", "FAIL": "status-fail", "IN PROGRESS": "status-in-progress"}
+    classes = {"PASS": "status-pass", "FAIL": "status-fail", "IN PROGRESS": "status-in-progress",
+               "WARN": "status-warn"}
     return f"<span class='status {classes.get(status, '')}'>{status}</span>"

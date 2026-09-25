@@ -30,10 +30,16 @@ def render() -> None:
             st.warning("Sample rate is unknown. Spectrum and constellation are relative only; bandwidth, symbol rate, "
                        "and center frequency in Hz are unavailable.")
         rows = []
+        # Surfaced as a qualifier on the Center Frequency row rather than a raw
+        # numeric row: False means the displayed frequency is a baseband offset,
+        # not an absolute RF frequency.
+        absolute_available = bool(analysis.parameters.get("absolute_frequency_available"))
         for key, value in analysis.parameters.items():
             if key == "absolute_frequency_available":
                 continue
             label = key.replace("_", " ").replace("hz", "Hz").replace("db", "dB")
+            if key == "center_frequency_hz" and not absolute_available:
+                label += " <span class='muted'>(relative to baseband)</span>"
             display = "UNAVAILABLE" if value is None else f"{value:,.2f}"
             state = " unavailable" if value is None else ""
             rows.append(f"<tr><td class='label'>{label}</td><td class='value{state}'>{display}</td></tr>")
