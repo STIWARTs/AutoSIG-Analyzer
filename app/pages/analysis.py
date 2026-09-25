@@ -40,7 +40,7 @@ def render() -> None:
         st.markdown("<div class='instrument-panel'><table class='measurement'>" + "".join(rows) + "</table></div>",
                     unsafe_allow_html=True)
         sample = analysis.signal.samples[: min(5000, len(analysis.signal.samples))]
-        st.plotly_chart(constellation_figure(sample, "Raw I/Q (pre-synchronization)", size=250),
+        st.plotly_chart(constellation_figure(sample, "Raw I/Q (pre-synchronization)", size=300),
                         use_container_width=False, key="constellation")
     st.markdown("#### Trained CNN confidence")
     ordered = sorted(result.probabilities.items(), key=lambda item: item[1], reverse=True)
