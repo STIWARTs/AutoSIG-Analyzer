@@ -33,10 +33,10 @@ def bpsk_map(bits: np.ndarray) -> np.ndarray:
     return (1 - 2 * np.asarray(bits, dtype=np.int8)).astype(np.float32).astype(np.complex64)
 
 
-def _write_sigmf(path: Path, snr_db: float, offset_hz: float, modulation: str) -> None:
+def _write_sigmf(path: Path, snr_db: float, offset_hz: float, modulation: str, generator: str) -> None:
     metadata = {
         "global": {"core:datatype": "cf32_le", "core:sample_rate": SAMPLE_RATE,
-                   "core:description": f"GNU Radio generated {modulation}; SNR {snr_db:.1f} dB"},
+                   "core:description": f"{generator} generated {modulation}; SNR {snr_db:.1f} dB"},
         "captures": [{"core:sample_start": 0, "core:frequency": 0.0}],
         "annotations": [{"core:label": modulation, "autosig:snr_db": snr_db,
                          "autosig:frequency_offset_hz": offset_hz,
@@ -68,7 +68,7 @@ def generate(output: Path, count_per_class: int = 32, seed: int = 20260922) -> P
             iq_path = output / f"{stem}.iq"
             generator = run_flowgraph(symbols, iq_path, SAMPLE_RATE, SAMPLES_PER_SYMBOL, offset_hz, snr_db)
             values = np.fromfile(iq_path, dtype=np.complex64)
-            _write_sigmf(output / f"{stem}.sigmf-meta", snr_db, offset_hz, modulation)
+            _write_sigmf(output / f"{stem}.sigmf-meta", snr_db, offset_hz, modulation, generator)
             _write_wav(values, output / f"{stem}.wav")
             manifest.append({"iq": iq_path.name, "wav": f"{stem}.wav", "label": modulation,
                              "snr_db": snr_db, "frequency_offset_hz": offset_hz,
@@ -80,7 +80,9 @@ def generate(output: Path, count_per_class: int = 32, seed: int = 20260922) -> P
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate labeled GNU Radio QPSK/BPSK AutoSIG captures")
+    parser = argparse.ArgumentParser(description="Generate labeled QPSK/BPSK AutoSIG captures "
+                                                  "(GNU Radio flowgraph when available, else the explicitly "
+                                                  "labeled NumPy flowgraph-equivalent fallback)")
     parser.add_argument("--output", type=Path, default=ROOT / "datasets")
     parser.add_argument("--count-per-class", type=int, default=32)
     args = parser.parse_args()

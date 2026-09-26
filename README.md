@@ -2,17 +2,21 @@
 
 AutoSIG Analyzer is a Streamlit prototype for `.iq`/SigMF and `.wav` signal
 analysis. It applies deterministic DSP analysis, a trained raw-I/Q PyTorch CNN,
-Top-K modulation hypotheses, and a real recovery chain validated through frame
-preamble correlation.
+Top-K modulation hypotheses, and a real recovery chain whose acceptance
+decision is preamble correlation: a hypothesis is accepted when the known
+32-bit frame preamble is detected in its recovered bits above a correlation
+threshold. That is evidence the frame structure came out coherent — it does
+not certify that every payload bit is correct.
 
 ## MVP boundary
 
 The implemented recovery path is deliberately limited to the documented MVP:
 QPSK and BPSK demodulation, block de-interleaving, and rate-1/2 convolutional
 decoding with Viterbi. The CNN has two trained modulation classes, QPSK and
-BPSK, and both are fully demodulated and validated through the recovery chain in
-this MVP. Every ranked hypothesis is pushed through the chain (not stopped at
-the first pass), so a misclassified candidate is visibly tested and refuted.
+BPSK, and both are fully demodulated through the recovery chain in this MVP,
+with acceptance decided by preamble correlation. Every ranked hypothesis is
+pushed through the chain (not stopped at the first pass), so a misclassified
+candidate is visibly tested and refuted.
 
 ## Setup
 
@@ -25,18 +29,23 @@ conda create --prefix .conda python=3.14 pip -y
 conda install --prefix .conda -c conda-forge gnuradio -y
 ```
 
-GNU Radio is used for offline synthetic capture generation when its Conda
+GNU Radio is the intended offline synthetic capture generator when its Conda
 runtime is available. The generator has an explicitly labeled sample-accurate
-repeat/rotator/AWGN fallback for Windows/Python combinations that do not yet
-ship GNU Radio; it never pretends fallback captures are GNU Radio captures.
-Inspect `datasets/manifest.json` to see which generator created each capture.
+repeat/rotator/AWGN NumPy fallback — an implementation of the same flowgraph —
+for Windows/Python combinations that do not yet ship GNU Radio; it never
+pretends fallback captures are GNU Radio captures. The captures currently
+shipped under `datasets/` were all produced by that NumPy fallback (GNU Radio
+was not runnable in this environment), and every `datasets/manifest.json`
+record and `.sigmf-meta` description says so. Inspect `datasets/manifest.json`
+to see which generator created each capture.
 The running application needs the trained model under `models/` but does not
 import GNU Radio.
 
 ## Generate, train, and run
 
 ```powershell
-# Generate GNU Radio QPSK/BPSK captures as .iq + SigMF + stereo .wav
+# Generate QPSK/BPSK captures (GNU Radio flowgraph if available, else the labeled
+# NumPy flowgraph-equivalent fallback) as .iq + SigMF + stereo .wav
 .\.conda\python.exe training/generate_dataset.py --count-per-class 32
 
 # Train the CNN and write models/modulation_cnn.pt plus measured test metrics
@@ -52,14 +61,16 @@ enter the sample rate in the inline metadata form for absolute-Hz analysis, or
 continue with clearly labelled relative-only spectral/constellation analysis.
 Any generated `datasets/*.wav` file remains a single-file upload.
 The app runs the real trained classifier output through its hypothesis list;
-recovery is accepted only when the recovered bits pass preamble correlation.
+recovery is accepted only when the recovered bits pass preamble correlation —
+the known preamble pattern is detected above the correlation threshold, which
+confirms synchronization and framing, not the correctness of every payload bit.
 The Analysis screen shows the raw I/Q constellation (pre-synchronization), while
 the Bitstream screen additionally shows the recovered-symbol constellation
-(post-synchronization) once a hypothesis has been validated.
+(post-synchronization) once a hypothesis has been accepted.
 
 ## Analysis history
 
-Every completed run — whether a hypothesis validated or all candidates failed —
+Every completed run — whether a hypothesis was accepted or all candidates failed —
 is persisted to a SQLite database at `data/autosig.db` using only the Python
 standard library (no external database server, no new dependencies). The
 Dashboard lists the most recent analyses and lets you select any one to reload

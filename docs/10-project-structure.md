@@ -27,7 +27,7 @@ SIH-26147/
 ├── training/                    # offline model training scripts (not run at app runtime)
 ├── models/                      # trained model weights loaded by backend/ml
 ├── datasets/                    # synthetic .iq + .sigmf-meta + .wav files, ground truth labels
-├── gnuradio/                    # GNU Radio flowgraphs used to generate datasets/
+├── gnuradio/                    # GNU Radio flowgraph definition (shipped datasets/ came from its labeled NumPy fallback)
 ├── data/                        # runtime artifacts: autosig.db SQLite analysis history (created on first run)
 ├── tests/                       # unit tests for backend components
 ├── docs/                        # this specification folder

@@ -8,7 +8,8 @@ def render() -> None:
         st.warning("Upload and analyze a signal first.")
         return
     st.markdown("<div class='screen-heading'>Hypothesis Recovery</div>", unsafe_allow_html=True)
-    st.caption("Ranked from the trained classifier's real softmax output; each candidate is recovered and validated in order.")
+    st.caption("Ranked from the trained classifier's real softmax output; each candidate is recovered in order and "
+               "accepted only when its recovered bits contain the known frame preamble above the correlation threshold.")
     # Interleaving and FEC are identical on every candidate (never varied or
     # independently tested), so presenting them per hypothesis would imply a
     # search that does not happen; state the fixed configuration once instead.
@@ -30,6 +31,8 @@ def render() -> None:
             content += "<div style='padding:8px 0'>" + status_badge("IN PROGRESS") + "</div>"
         st.markdown(content + "</div>", unsafe_allow_html=True)
     if result.accepted:
-        st.success(f"Validated recovery: Hypothesis #{result.accepted.hypothesis.rank}")
+        st.success(f"Recovery accepted: Hypothesis #{result.accepted.hypothesis.rank} — the known preamble was detected "
+                   "in its recovered bits above the correlation threshold. This evidences synchronization, demodulation "
+                   "and framing — it does not prove every payload bit is correct.")
     else:
-        st.error("No hypothesis cleared frame validation.")
+        st.error("No hypothesis's recovered bits contained the known preamble above the correlation threshold.")

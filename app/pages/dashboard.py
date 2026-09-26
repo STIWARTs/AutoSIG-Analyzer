@@ -17,7 +17,7 @@ def _pretty_time(timestamp: str) -> str:
 def render() -> None:
     st.markdown("<div class='screen-heading'>AutoSIG Analyzer</div>", unsafe_allow_html=True)
     st.markdown("**Signal analysis and recovery workstation**")
-    st.caption("IQ / SigMF and WAV ingestion · DSP characterization · trained I/Q classification · validated recovery")
+    st.caption("IQ / SigMF and WAV ingestion · DSP characterization · trained I/Q classification · preamble-confirmed recovery acceptance")
     st.markdown("<div class='instrument-panel'><span class='muted'>MVP operating envelope</span><br>"
                 "QPSK recovery · block de-interleaving · convolutional/Viterbi FEC · BPSK classification</div>",
                 unsafe_allow_html=True)
@@ -25,7 +25,7 @@ def render() -> None:
     active_id = st.session_state.get("active_analysis_id")
     result = st.session_state.get("result")
     if result:
-        status = "validated recovery" if result.accepted else "no validated recovery"
+        status = "recovery accepted (preamble detected)" if result.accepted else "no hypothesis passed preamble detection"
         origin = "from history" if active_id is not None else "live"
         st.subheader("Active analysis")
         st.markdown(f"<div class='instrument-panel mono'><span class='muted'>CURRENT</span><br>"
@@ -46,7 +46,7 @@ def render() -> None:
     for row in rows:
         is_active = row["id"] == active_id
         marker = "<span style='color:var(--accent)'>● </span>" if is_active else "<span style='color:var(--line)'>○ </span>"
-        modulation = row["accepted_modulation"] or "<span class='muted'>no hypothesis validated</span>"
+        modulation = row["accepted_modulation"] or "<span class='muted'>no hypothesis accepted</span>"
         correlation = f"{row['correlation_score']:.3f}" if row["correlation_score"] is not None else "—"
         columns = st.columns((4.2, 3.1, 2.4, 1.4, 1.1))
         columns[0].markdown(f"{marker}<span class='mono'>{row['input_filename']}</span>", unsafe_allow_html=True)

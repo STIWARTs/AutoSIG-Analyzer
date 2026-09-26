@@ -76,7 +76,7 @@ def upload_screen() -> None:
             with st.spinner("Running DSP, trained CNN classification, recovery and correlation…"):
                 ingested = parse_upload(signal_file, sigmf_file, manual_rate, manual_datatype, manual_center)
                 st.session_state.result = run_pipeline(ingested)
-                # Persist every completed run (validated or all-failed) and mark it active
+                # Persist every completed run (preamble-confirmed or all-failed) and mark it active
                 # so the Dashboard highlights it and history survives a server restart.
                 st.session_state.active_analysis_id = save_analysis(st.session_state.result)
                 st.session_state.pop("select_analysis", None)

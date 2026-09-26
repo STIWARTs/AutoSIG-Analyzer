@@ -47,7 +47,7 @@ Synchronization runs once per hypothesis in the recovery chain (`05-recovery-cha
 ## Tools
 
 - `NumPy` / `SciPy` for FFT, filtering, resampling, and spectral estimation.
-- `GNU Radio` (via its Python bindings, or simply as the tool used to *generate* the synthetic training/demo data) for anything that benefits from an existing, tested DSP block rather than a hand-rolled implementation.
+- `GNU Radio` (via its Python bindings, or as the *intended* offline tool to generate the synthetic training/demo data — the shipped corpus was actually produced by the generator's labeled, flowgraph-equivalent NumPy fallback; see `07-data-generation.md`) for anything that benefits from an existing, tested DSP block rather than a hand-rolled implementation.
 - `Plotly` or `Matplotlib` for rendering the spectrum, waterfall, and constellation plots inside the Streamlit UI.
 
 ## Output of This Stage

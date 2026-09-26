@@ -6,11 +6,13 @@ The PS's own background note points out that off-air recordings from different s
 
 ## Tooling
 
-**GNU Radio** is used to generate the synthetic dataset, since it provides mature, tested blocks for modulation, interleaving, FEC encoding, channel noise, and frequency offset — building these from scratch would be reinventing well-established DSP for no benefit.
+The intended generator is **GNU Radio**, which provides mature, tested blocks for modulation, interleaving, FEC encoding, channel noise, and frequency offset. The flowgraph exists in this repo (`gnuradio/synthetic_flowgraph.py`) but was **not runnable in this environment** (no compatible GNU Radio build for this Windows / Python combination). The shipped dataset under `datasets/` was therefore produced by the generator's **explicitly labeled NumPy implementation of the same flowgraph** — a sample-accurate repeat → rotator → AWGN path that is bit-reproducible from a recorded seed.
+
+Honesty about provenance is enforced, not aspirational: `datasets/manifest.json` records the exact generator string per capture (currently `"NumPy flowgraph-equivalent fallback (GNU Radio unavailable)"` for all 64 files), each `.sigmf-meta` `core:description` carries the same generator label, and the offline evaluation gate (`tools/corpus_payload_eval.py`) regenerates captures through that same path and requires bit-identity with the files on disk. No shipped capture claims to be GNU Radio produced when it is not.
 
 ## What Gets Generated
 
-For the MVP, a set of QPSK signals with block interleaving and convolutional FEC encoding, each with:
+For the MVP, a set of **QPSK and BPSK** signals (32 captures per class — the same two classes the trained classifier knows, 64 in total) with block interleaving and convolutional FEC encoding, each with:
 
 - A known embedded preamble/sync-word pattern (used later for validation correlation).
 - A range of SNR levels (to make the ML classifier and the recovery chain robust to noise, not just clean signals).
@@ -27,4 +29,4 @@ This dataset serves three purposes simultaneously: it is the labeled training se
 
 ## Output Location
 
-Generated files are stored under `datasets/`, with the GNU Radio flowgraphs used to produce them stored under `gnuradio/` (see `10-project-structure.md`).
+Generated files are stored under `datasets/`, with the GNU Radio flowgraph definition (and its NumPy fallback, which actually produced the shipped captures) under `gnuradio/` (see `10-project-structure.md`).

@@ -21,7 +21,10 @@ learns the two MVP classes — **BPSK and QPSK** (`CLASS_NAMES = ("BPSK", "QPSK"
 - When GNU Radio is unavailable (common on Windows / Python 3.14), the generator
   falls back to a **sample-accurate NumPy** repeat → rotator → AWGN path.
 - `datasets/manifest.json` records which generator produced each capture, and a
-  fallback capture is **never** mislabeled as a GNU Radio one.
+  fallback capture is **never** mislabeled as a GNU Radio one — in the manifest
+  and in each `.sigmf-meta` `core:description` alike. All captures currently
+  shipped under `datasets/` carry the fallback label; GNU Radio itself did not
+  run in this environment.
 
 Rationale for synthetic data is covered in `07-data-generation.md`: controlling
 ground truth is the only way to *prove* the pipeline is correct within a

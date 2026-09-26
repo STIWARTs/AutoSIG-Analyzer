@@ -9,7 +9,7 @@ This folder is the complete specification for the AutoSIG Analyzer prototype (SI
 5. `04-hypothesis-engine.md` — Top-K hypothesis ranking
 6. `05-recovery-chain.md` — demodulation, de-interleaving, FEC decoding
 7. `06-validation-correlation.md` — bitstream correlation and validation
-8. `07-data-generation.md` — synthetic GNU Radio dataset and SigMF metadata
+8. `07-data-generation.md` — synthetic dataset (GNU Radio flowgraph, run here via its labeled NumPy equivalent) and SigMF metadata
 9. `model-training.md` — how the modulation classifier is trained (data provenance, recipe, metrics)
 10. `08-file-formats.md` — `.IQ` and `.WAV` parsing specifics
 11. `09-tech-stack.md` — technology choices and rationale
