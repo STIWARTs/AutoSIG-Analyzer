@@ -1,0 +1,22 @@
+{
+  "global": {
+    "core:datatype": "cf32_le",
+    "core:sample_rate": 48000,
+    "core:description": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable) generated BPSK; SNR 4.0 dB"
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:frequency": 0.0
+    }
+  ],
+  "annotations": [
+    {
+      "core:label": "BPSK",
+      "autosig:snr_db": 4.0,
+      "autosig:frequency_offset_hz": 2.8019922109544666,
+      "autosig:interleaving": "Block",
+      "autosig:fec": "Convolutional/Viterbi"
+    }
+  ]
+}

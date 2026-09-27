@@ -1,0 +1,578 @@
+[
+  {
+    "iq": "qpsk_000_snr-2_cfo-74.iq",
+    "wav": "qpsk_000_snr-2_cfo-74.wav",
+    "label": "QPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -74.12669192031848,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_001_snr+0_cfo+79.iq",
+    "wav": "qpsk_001_snr+0_cfo+79.wav",
+    "label": "QPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 78.61993700106146,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_002_snr+4_cfo-13.iq",
+    "wav": "qpsk_002_snr+4_cfo-13.wav",
+    "label": "QPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": -12.692692303244655,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_003_snr+8_cfo+53.iq",
+    "wav": "qpsk_003_snr+8_cfo+53.wav",
+    "label": "QPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 53.34734974234536,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_004_snr+12_cfo+45.iq",
+    "wav": "qpsk_004_snr+12_cfo+45.wav",
+    "label": "QPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": 44.70212827884521,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_005_snr+18_cfo+53.iq",
+    "wav": "qpsk_005_snr+18_cfo+53.wav",
+    "label": "QPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 52.616425254551814,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_006_snr-2_cfo-46.iq",
+    "wav": "qpsk_006_snr-2_cfo-46.wav",
+    "label": "QPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -45.935971254171534,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_007_snr+0_cfo-34.iq",
+    "wav": "qpsk_007_snr+0_cfo-34.wav",
+    "label": "QPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": -34.009280035279,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_008_snr+4_cfo+60.iq",
+    "wav": "qpsk_008_snr+4_cfo+60.wav",
+    "label": "QPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 60.30074385693044,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_009_snr+8_cfo+19.iq",
+    "wav": "qpsk_009_snr+8_cfo+19.wav",
+    "label": "QPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 19.44626053016752,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_010_snr+12_cfo-71.iq",
+    "wav": "qpsk_010_snr+12_cfo-71.wav",
+    "label": "QPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": -71.47518188925825,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_011_snr+18_cfo+8.iq",
+    "wav": "qpsk_011_snr+18_cfo+8.wav",
+    "label": "QPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 8.009491065700828,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_012_snr-2_cfo+79.iq",
+    "wav": "qpsk_012_snr-2_cfo+79.wav",
+    "label": "QPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": 78.79786043016475,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_013_snr+0_cfo+67.iq",
+    "wav": "qpsk_013_snr+0_cfo+67.wav",
+    "label": "QPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 66.56226606377237,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_014_snr+4_cfo+42.iq",
+    "wav": "qpsk_014_snr+4_cfo+42.wav",
+    "label": "QPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 42.41596022517581,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_015_snr+8_cfo+26.iq",
+    "wav": "qpsk_015_snr+8_cfo+26.wav",
+    "label": "QPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 25.696466445651197,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_016_snr+12_cfo+32.iq",
+    "wav": "qpsk_016_snr+12_cfo+32.wav",
+    "label": "QPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": 32.286743102480315,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_017_snr+18_cfo+27.iq",
+    "wav": "qpsk_017_snr+18_cfo+27.wav",
+    "label": "QPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 26.54958777339256,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_018_snr-2_cfo-29.iq",
+    "wav": "qpsk_018_snr-2_cfo-29.wav",
+    "label": "QPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -29.21697117875909,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_019_snr+0_cfo+55.iq",
+    "wav": "qpsk_019_snr+0_cfo+55.wav",
+    "label": "QPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 55.190008979877746,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_020_snr+4_cfo-49.iq",
+    "wav": "qpsk_020_snr+4_cfo-49.wav",
+    "label": "QPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": -48.645431342467944,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_021_snr+8_cfo+36.iq",
+    "wav": "qpsk_021_snr+8_cfo+36.wav",
+    "label": "QPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 36.37724497674817,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_022_snr+12_cfo-26.iq",
+    "wav": "qpsk_022_snr+12_cfo-26.wav",
+    "label": "QPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": -26.3538392072412,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_023_snr+18_cfo+75.iq",
+    "wav": "qpsk_023_snr+18_cfo+75.wav",
+    "label": "QPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 75.45434659150462,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_024_snr-2_cfo-49.iq",
+    "wav": "qpsk_024_snr-2_cfo-49.wav",
+    "label": "QPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -48.52951468975337,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_025_snr+0_cfo+46.iq",
+    "wav": "qpsk_025_snr+0_cfo+46.wav",
+    "label": "QPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 46.43581384379206,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_026_snr+4_cfo+10.iq",
+    "wav": "qpsk_026_snr+4_cfo+10.wav",
+    "label": "QPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 10.084195582638358,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_027_snr+8_cfo-38.iq",
+    "wav": "qpsk_027_snr+8_cfo-38.wav",
+    "label": "QPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": -37.502519492015615,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_028_snr+12_cfo+82.iq",
+    "wav": "qpsk_028_snr+12_cfo+82.wav",
+    "label": "QPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": 82.07354882418187,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_029_snr+18_cfo+2.iq",
+    "wav": "qpsk_029_snr+18_cfo+2.wav",
+    "label": "QPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 1.823810196905086,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_030_snr-2_cfo+73.iq",
+    "wav": "qpsk_030_snr-2_cfo+73.wav",
+    "label": "QPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": 72.9436476986105,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "qpsk_031_snr+0_cfo-76.iq",
+    "wav": "qpsk_031_snr+0_cfo-76.wav",
+    "label": "QPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": -76.42336825694149,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_000_snr-2_cfo-78.iq",
+    "wav": "bpsk_000_snr-2_cfo-78.wav",
+    "label": "BPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -78.068956814555,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_001_snr+0_cfo+17.iq",
+    "wav": "bpsk_001_snr+0_cfo+17.wav",
+    "label": "BPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 17.130900061230506,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_002_snr+4_cfo-4.iq",
+    "wav": "bpsk_002_snr+4_cfo-4.wav",
+    "label": "BPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": -3.8988202523502906,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_003_snr+8_cfo+75.iq",
+    "wav": "bpsk_003_snr+8_cfo+75.wav",
+    "label": "BPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 74.99584151594303,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_004_snr+12_cfo-67.iq",
+    "wav": "bpsk_004_snr+12_cfo-67.wav",
+    "label": "BPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": -66.86948358074017,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_005_snr+18_cfo+50.iq",
+    "wav": "bpsk_005_snr+18_cfo+50.wav",
+    "label": "BPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 50.2491590819304,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_006_snr-2_cfo+69.iq",
+    "wav": "bpsk_006_snr-2_cfo+69.wav",
+    "label": "BPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": 69.38430046602224,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_007_snr+0_cfo+42.iq",
+    "wav": "bpsk_007_snr+0_cfo+42.wav",
+    "label": "BPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 42.27021920799375,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_008_snr+4_cfo+31.iq",
+    "wav": "bpsk_008_snr+4_cfo+31.wav",
+    "label": "BPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 31.10688312258104,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_009_snr+8_cfo+81.iq",
+    "wav": "bpsk_009_snr+8_cfo+81.wav",
+    "label": "BPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 80.7703627762435,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_010_snr+12_cfo+38.iq",
+    "wav": "bpsk_010_snr+12_cfo+38.wav",
+    "label": "BPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": 37.684742087771696,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_011_snr+18_cfo+79.iq",
+    "wav": "bpsk_011_snr+18_cfo+79.wav",
+    "label": "BPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": 78.95745309502024,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_012_snr-2_cfo-63.iq",
+    "wav": "bpsk_012_snr-2_cfo-63.wav",
+    "label": "BPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -62.58967924984761,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_013_snr+0_cfo+52.iq",
+    "wav": "bpsk_013_snr+0_cfo+52.wav",
+    "label": "BPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 51.98936848134494,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_014_snr+4_cfo+3.iq",
+    "wav": "bpsk_014_snr+4_cfo+3.wav",
+    "label": "BPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 2.8909850844283937,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_015_snr+8_cfo+36.iq",
+    "wav": "bpsk_015_snr+8_cfo+36.wav",
+    "label": "BPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 35.66829760311683,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_016_snr+12_cfo+70.iq",
+    "wav": "bpsk_016_snr+12_cfo+70.wav",
+    "label": "BPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": 69.65128089021579,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_017_snr+18_cfo-9.iq",
+    "wav": "bpsk_017_snr+18_cfo-9.wav",
+    "label": "BPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": -9.155262437578116,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_018_snr-2_cfo+31.iq",
+    "wav": "bpsk_018_snr-2_cfo+31.wav",
+    "label": "BPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": 30.84000237547376,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_019_snr+0_cfo-58.iq",
+    "wav": "bpsk_019_snr+0_cfo-58.wav",
+    "label": "BPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": -58.07063926176684,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_020_snr+4_cfo+33.iq",
+    "wav": "bpsk_020_snr+4_cfo+33.wav",
+    "label": "BPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 32.86322089674576,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_021_snr+8_cfo-19.iq",
+    "wav": "bpsk_021_snr+8_cfo-19.wav",
+    "label": "BPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": -18.992065772203432,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_022_snr+12_cfo-14.iq",
+    "wav": "bpsk_022_snr+12_cfo-14.wav",
+    "label": "BPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": -14.351291592506513,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_023_snr+18_cfo-1.iq",
+    "wav": "bpsk_023_snr+18_cfo-1.wav",
+    "label": "BPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": -0.5629145982888843,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_024_snr-2_cfo-44.iq",
+    "wav": "bpsk_024_snr-2_cfo-44.wav",
+    "label": "BPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": -44.23414174462756,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_025_snr+0_cfo+1.iq",
+    "wav": "bpsk_025_snr+0_cfo+1.wav",
+    "label": "BPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 1.2515573311094954,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_026_snr+4_cfo+3.iq",
+    "wav": "bpsk_026_snr+4_cfo+3.wav",
+    "label": "BPSK",
+    "snr_db": 4.0,
+    "frequency_offset_hz": 2.8019922109544666,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_027_snr+8_cfo+40.iq",
+    "wav": "bpsk_027_snr+8_cfo+40.wav",
+    "label": "BPSK",
+    "snr_db": 8.0,
+    "frequency_offset_hz": 40.22460546059585,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_028_snr+12_cfo-14.iq",
+    "wav": "bpsk_028_snr+12_cfo-14.wav",
+    "label": "BPSK",
+    "snr_db": 12.0,
+    "frequency_offset_hz": -13.82709161111869,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_029_snr+18_cfo-56.iq",
+    "wav": "bpsk_029_snr+18_cfo-56.wav",
+    "label": "BPSK",
+    "snr_db": 18.0,
+    "frequency_offset_hz": -56.067431002814686,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_030_snr-2_cfo+62.iq",
+    "wav": "bpsk_030_snr-2_cfo+62.wav",
+    "label": "BPSK",
+    "snr_db": -2.0,
+    "frequency_offset_hz": 62.37610024795947,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  },
+  {
+    "iq": "bpsk_031_snr+0_cfo+68.iq",
+    "wav": "bpsk_031_snr+0_cfo+68.wav",
+    "label": "BPSK",
+    "snr_db": 0.0,
+    "frequency_offset_hz": 68.29166642550095,
+    "generator": "NumPy flowgraph-equivalent fallback (GNU Radio unavailable)",
+    "sample_rate": 48000
+  }
+]
