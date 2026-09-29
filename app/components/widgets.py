@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import streamlit as st
 
+from .theme import is_light
+
 # Design-token palettes for each base theme. Every rule below references these
 # CSS custom properties, so switching the :root block is all that is needed to
 # recolor the whole custom UI. Values mirror .streamlit/config.toml.
@@ -22,10 +24,10 @@ _THEME_TOKENS = {
 
 
 def apply_theme() -> None:
-    # st.context.theme.type is inferred from the app background and flips when
-    # the user picks Light/Dark in the settings menu, so custom CSS stays in sync
-    # with Streamlit's native widgets instead of being pinned to dark.
-    tokens = _THEME_TOKENS.get(st.context.theme.type, _THEME_TOKENS["dark"])
+    # Theme resolution is deterministic and server-side (see theme.is_light):
+    # the same config that styles Streamlit's native widgets picks our custom
+    # CSS tokens, so the two can never disagree across browsers or deploys.
+    tokens = _THEME_TOKENS["light" if is_light() else "dark"]
     variables = " ".join(f"--{name}:{value};" for name, value in tokens.items())
     st.markdown(f"""
     <style>

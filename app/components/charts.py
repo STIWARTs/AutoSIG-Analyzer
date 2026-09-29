@@ -4,6 +4,8 @@ import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
 
+from .theme import is_light
+
 # Instrument-panel token system (see docs/design.md): hairline gridlines,
 # steel-cyan data points, IBM Plex Sans titles with IBM Plex Mono numeric
 # readouts. Shared by every Plotly chart so styling stays identical. Colors are
@@ -19,8 +21,11 @@ _PALETTE = {
 
 
 def palette() -> dict[str, str]:
-    """Active chart palette; pages use it for series/text colors too."""
-    return _PALETTE.get(st.context.theme.type, _PALETTE["dark"])
+    """Active chart palette; pages use it for series/text colors too.
+    Resolved from the effective config theme (see theme.is_light), not the
+    browser-inferred st.context.theme.type, so charts match the app CSS on
+    every machine."""
+    return _PALETTE["light" if is_light() else "dark"]
 
 
 def dark_layout(fig: go.Figure, height: int = 300) -> go.Figure:

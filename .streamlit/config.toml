@@ -1,24 +1,19 @@
 [theme]
-# base selects the default theme; users can toggle Light/Dark in the settings
-# menu because both [theme.light] and [theme.dark] are defined below.
-base = "dark"
+# Single fixed theme: base = "light" and NO [theme.light]/[theme.dark] sections.
+# Defining both sections would add a Light/Dark toggle to every visitor's
+# settings menu; that toggle is stored in browser localStorage, so each browser
+# could show a different native theme while our server-side CSS tokens (see
+# app/components/theme.py) follow only this file — the mismatch that broke the
+# deployed app's styling. With one flat theme, native widgets and custom CSS
+# always agree locally and on Streamlit Cloud.
+base = "light"
 primaryColor = "#3E92CC"
 font = "sans serif"
-
-[theme.dark]
-backgroundColor = "#0B0F14"
-secondaryBackgroundColor = "#12161C"
-textColor = "#E6EDF3"
-
-[theme.dark.sidebar]
-backgroundColor = "#0D1218"
-
-[theme.light]
 backgroundColor = "#F7F9FB"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#1B2733"
 
-[theme.light.sidebar]
+[theme.sidebar]
 backgroundColor = "#EDF1F5"
 
 [server]
