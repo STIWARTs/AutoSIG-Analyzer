@@ -3,7 +3,7 @@
 Actual layout of the repository as shipped (every entry below exists today; nothing here is aspirational).
 
 ```
-SIH-26147/
+SIH/
 │
 ├── app/                         # Streamlit frontend — the only runtime UI
 │   ├── streamlit_app.py         # entry point: upload screen, nav, run/persist orchestration
