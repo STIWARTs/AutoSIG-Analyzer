@@ -1,6 +1,6 @@
 # AutoSIG Analyzer — Documentation Index
 
-This folder is the complete specification for the AutoSIG Analyzer prototype (SIH26147, Team TryCatchFinally). Read `00-overview.md` first for the problem statement and project summary; the rest of the files are ordered to be read roughly in pipeline order, from ingestion through deployment.
+This folder is the complete specification for the AutoSIG Analyzer prototype (SIH). Read `00-overview.md` first for the problem statement and project summary; the rest of the files are ordered to be read roughly in pipeline order, from ingestion through deployment.
 
 1. `00-overview.md` — problem statement, team, and project summary
 2. `01-architecture.md` — system architecture and data flow
